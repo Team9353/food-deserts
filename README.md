@@ -15,9 +15,12 @@ the `server` and `client` directories.
 
 - The recommended IDE is IntelliJ IDEA.  If you use it, you should have 2 run configurations already made for running
 the server and client in development modes.
+- You can start both the server and client in development modes by navigating to the respective directory (`/server`
+or `/client`) and running `npm start`.
 - The server runs on [localhost:3000](http://localhost:3000) by default.  Do not change this, or you may break parts of the client.
 - The client will run on whatever port is specified in the `PORT` environment variable.  In the run configuration included,
 this is port 3001.
 - If you modify the client, you must increment the version specified in [client/package.json](client/package.json).  There's
 a React component that will force clients to clear their cache any time a new version is deployed, but this only works
 if the version is incremented on all releases.
+- Commit changes to any package-lock.json files.
