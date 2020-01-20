@@ -16,10 +16,5 @@
   "bugs": {
     "url": "https://github.com/team9353/food-deserts/issues"
   },
-  "homepage": "https://github.com/team9353/food-deserts#readme",
-  "dependencies": {
-    "react-router": "^5.1.2",
-    "react-router-dom": "^5.1.2",
-    "semantic-ui-react": "^0.88.2"
-  }
+  "homepage": "https://github.com/team9353/food-deserts#readme"
 }
