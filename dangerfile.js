@@ -9,10 +9,10 @@ if (client.edited) {
     schedule(danger.git.JSONDiffForFile("client/package.json").then(diff => {
         if (diff) {
             if (!diff.version) {
-                fail("The client files were modified; please update the client version.", "client/package.json");
+                fail("Files in the [`client`](/client) directory were modified; please update the client version.", "client/package.json");
             }
             if (diff.dependencies || diff.devDependencies) {
-                message("This pull request includes client dependency changes.", {icon: "triangular_flag_on_post"})
+                message("This pull request includes client dependency changes.", {icon: "🚩"})
             }
         }
     }));
@@ -23,10 +23,10 @@ if (server.edited) {
     schedule(danger.git.JSONDiffForFile("server/package.json").then(diff => {
         if (diff) {
             if (!diff.version) {
-                fail("The server files were modified; please update the server version.", "server/package.json");
+                fail("Files in the [`server`](/server) directory were modified; please update the server version.", "server/package.json");
             }
             if (diff.dependencies || diff.devDependencies) {
-                message("This pull request includes server dependency changes.", {icon: "triangular_flag_on_post"})
+                message("This pull request includes server dependency changes.", {icon: "🚩"})
             }
         }
     }));
@@ -34,7 +34,7 @@ if (server.edited) {
 
 const root = danger.git.fileMatch("./*");
 if (root.edited) {
-    schedule(danger.git.JSONDiffForFile("./package.json").then(diff => {
+    schedule(danger.git.JSONDiffForFile("package.json").then(diff => {
         if (diff) {
             if (diff.dependencies || diff.devDependencies) {
                 warn("This pull request includes dependency changes in the root `package.json`.  Is this intentional?");
