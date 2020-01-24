@@ -1,7 +1,5 @@
 import {danger, fail, message, schedule, warn} from "danger";
 
-const _ = require("lodash");
-
 if (!danger.github.pr.body.includes("#trivial") && danger.github.pr.body.length < 100) {
     fail("The pull request description must be longer.  Include #trivial to override this.")
 }

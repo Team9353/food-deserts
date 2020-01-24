@@ -18,7 +18,6 @@
   },
   "homepage": "https://github.com/team9353/food-deserts#readme",
   "devDependencies": {
-    "danger": "^9.2.10",
-    "lodash": "^4.17.15"
+    "danger": "^9.2.10"
   }
 }
