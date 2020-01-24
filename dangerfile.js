@@ -12,12 +12,12 @@ if (client.edited) {
                 fail("Files in the [`client`](/client) directory were modified; please update the client version.", "client/package.json");
             }
             if (diff.dependencies || diff.devDependencies) {
-                message("This pull request includes client dependency changes.", {icon: ""})
+                message("This pull request includes client dependency changes.", {icon: "ℹ"})
             }
         }
     }));
 }
-ℹ;
+
 
 const server = danger.git.fileMatch("server/**");
 if (server.edited) {
