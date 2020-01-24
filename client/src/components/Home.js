@@ -1,7 +1,7 @@
 import React from 'react';
 import AccordianHome from './AccordianHome'
 import { NavLink } from 'react-router-dom'
-
+import './css/accord.css'
 
 function Home(props) {
     return (
