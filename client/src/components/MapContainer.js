@@ -1,4 +1,4 @@
-import React from "react    ";
+import React from "react";
 import GoogleMap from "./map/GoogleMap";
 
 class MapContainer extends React.Component {
