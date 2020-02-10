@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react    ";
 import GoogleMap from "./map/GoogleMap";
 
 class MapContainer extends React.Component {
@@ -6,8 +6,8 @@ class MapContainer extends React.Component {
         return <div>
             <h1>Map</h1>
             <GoogleMap/>
-        </div>
+        </div>;
     }
 }
 
-export default MapContainer
+export default MapContainer;
