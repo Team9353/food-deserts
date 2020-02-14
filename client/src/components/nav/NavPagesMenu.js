@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import NavPages from "./NavPages";
 import PropTypes from "prop-types";
 import {Menu} from "semantic-ui-react";
@@ -8,7 +8,7 @@ const NavPagesMenu = (props) => {
         <NavPages mobile={props.mobile}>
             {props.children}
         </NavPages>
-    </Menu>
+    </Menu>;
 };
 
 NavPages.propTypes = {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import PropTypes from "prop-types";
 import {Menu} from "semantic-ui-react";
 import {Link} from "react-router-dom";
@@ -27,7 +27,7 @@ const NavPages = (props) => {
         {props.children}
         {!props.mobile && routes.map(route => <Menu.Item key={route.link} as={Link}
                                                          to={route.link}>{route.name}</Menu.Item>)}
-    </>
+    </>;
 };
 
 NavPages.propTypes = {
