@@ -17,19 +17,12 @@ function App() {
             maxWidth: "960px",
             margin: "0 auto",
             padding: "0 5px",
-            minHeight: "100vh"
+            minHeight: "100vh" // We need the page height to match the screen/window height so the mobile
+                               // hamburger menu appears correctly.  This method of doing that is from https://github.com/ctrlplusb/react-sizeme/issues/111#issuecomment-295166102
         }}>
             <Router>
                 <div>
-                    {/*<List bulleted>*/}
-                    {/*    <List.Item as={Link} to="/">Home</List.Item>*/}
-                    {/*    <List.Item as={Link} to="/map">Map</List.Item>*/}
-                    {/*    <List.Item as={Link} to="/email">Email</List.Item>*/}
-                    {/*    <List.Item as={Link} to="/info">More Info</List.Item>*/}
-                    {/*    <List.Item as={Link} to="/faq">FAQ</List.Item>*/}
-                    {/*</List>*/}
                     <Navigation/>
-
                     <Switch>
                         <Route path="/map" component={MapContainer}/>
                         <Route path="/email" component={EmailTemp}/>

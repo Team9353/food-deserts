@@ -33,41 +33,6 @@ const Navigation = (props) => {
             </Responsive>
         </Sidebar.Pusher>
     </>;
-
-    //
-    // return <div style={{marginBottom: 30}}>
-    //
-    //     <Responsive maxWidth={767}>
-    //         <Menu>
-    //             {logo}
-    //             <Menu.Item>
-    //                 {/*<Sidebar.Pusher>*/}
-    //                 {/*    Sidebar*/}
-    //                 {/*</Sidebar.Pusher>*/}
-    //             </Menu.Item>
-    //
-    //         </Menu>
-    //         {/*<Sidebar.Pushable>*/}
-    //
-    //         {/*    <Sidebar animation="overlay"*/}
-    //         {/*             icon="labeled"*/}
-    //         {/*             inverted*/}
-    //         {/*             vertical*/}
-    //         {/*             visible*/}
-    //         {/*             width="thin">*/}
-    //         {/*        test*/}
-    //         {/*    </Sidebar>*/}
-    //         {/*</Sidebar.Pushable>*/}
-    //     </Responsive>
-    //
-    //     <Responsive as={Menu} minWidth={768}>
-    //         {logo}
-    //         {routes.map(route => <Menu.Item key={route.link} as={Link}
-    //                                         to={route.link}>{route.name}</Menu.Item>)}
-    //     </Responsive>
-
-
-    // </div>
 };
 
 
