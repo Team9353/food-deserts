@@ -1,6 +1,5 @@
 import React, {useState} from "react";
-import { Dropdown } from "semantic-ui-react";
-import { Form, Radio } from "semantic-ui-react"
+import { Dropdown, Form, Radio } from "semantic-ui-react";
 import "./css/filters.css";
 
 function Filters(props) {
@@ -23,7 +22,7 @@ function Filters(props) {
             text: "$$$",
             value: 3,
         },
-    ]
+    ];
 
     const travelOptions = [
         {
@@ -56,7 +55,7 @@ function Filters(props) {
             text: "+50 minutes",
             value: 50,
         },
-    ]
+    ];
 
     const transportOptions = [
         {
@@ -79,7 +78,7 @@ function Filters(props) {
             text: "Biking",
             value: 6,
         },
-    ]
+    ];
 
     return (
         <div>
@@ -139,4 +138,4 @@ function Filters(props) {
 
 }
 
-export default Filters
+export default Filters;
