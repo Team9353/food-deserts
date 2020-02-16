@@ -27,32 +27,32 @@ function Filters(props) {
     const travelOptions = [
         {
             key: "10",
-            text: "10 minutes",
+            text: "10",
             value: 10,
         },
         {
             key: "20",
-            text: "20 minutes",
+            text: "20",
             value: 20,
         },
         {
             key: "25",
-            text: "25 minutes",
+            text: "25",
             value: 25,
         },
         {
             key: "30",
-            text: "30 minutes",
+            text: "30",
             value: 30,
         },
         {
             key: "40",
-            text: "40 minutes",
+            text: "40",
             value: 40,
         },
         {
             key: "+50",
-            text: "+50 minutes",
+            text: "+50",
             value: 50,
         },
     ];
@@ -60,22 +60,22 @@ function Filters(props) {
     const transportOptions = [
         {
             key: "walking",
-            text: "Walking",
+            text: "walk",
             value: 2,
         },
         {
             key: "car",
-            text: "Car",
+            text: "drive",
             value: 35,
         },
         {
             key: "public_transportation",
-            text: "Public Transportation",
+            text: "take the bus/train",
             value: 15,
         },
         {
             key: "biking",
-            text: "Biking",
+            text: "bike",
             value: 6,
         },
     ];
@@ -116,7 +116,7 @@ function Filters(props) {
             </Form>
 
             <div id="filter">
-                <p> Select time amount of time you would be willing to travel up to: </p>
+                <p> You prefer to travel ___ minutes to the grocery store </p>
                 <Dropdown
                     placeholder="Select Time"
                     fluid
@@ -124,8 +124,9 @@ function Filters(props) {
                     options={travelOptions}
                 />
             </div>
+
             <div id="filter">
-                <p> Select your preferred mode of transportation: </p>
+                <p> You prefer to ____ to the grocery store: </p>
                 <Dropdown
                     placeholder="Select Transportation"
                     fluid
