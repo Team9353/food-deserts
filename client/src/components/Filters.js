@@ -84,7 +84,7 @@ function Filters(props) {
         <div>
             <Form id = "filter">
                 <Form.Field>
-                    How much money are you looking to spend?
+                    I am looking to spend ___ money.
                 </Form.Field>
                 <Form.Field>
                     <Radio
@@ -116,7 +116,7 @@ function Filters(props) {
             </Form>
 
             <div id="filter">
-                <p> You prefer to travel ___ minutes to the grocery store </p>
+                <p> I prefer to travel ___ minutes to the grocery store </p>
                 <Dropdown
                     placeholder="Select Time"
                     fluid
@@ -126,7 +126,7 @@ function Filters(props) {
             </div>
 
             <div id="filter">
-                <p> You prefer to ____ to the grocery store: </p>
+                <p> I prefer to ____ to the grocery store: </p>
                 <Dropdown
                     placeholder="Select Transportation"
                     fluid
