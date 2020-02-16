@@ -1,18 +1,12 @@
 import React from "react";
 import GoogleMap from "./map/GoogleMap";
-import Filters from "./Filters.js";
-
-import "./css/map.css";
 
 class MapContainer extends React.Component {
     render() {
-        return (
-            <div id = "outer">
-                <h1>Map</h1>
-                <GoogleMap/>
-                <Filters/>
-            </div>
-        );
+        return <div>
+            <h1>Map</h1>
+            <GoogleMap/>
+        </div>;
     }
 }
 
