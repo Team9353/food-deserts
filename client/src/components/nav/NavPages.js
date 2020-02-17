@@ -26,6 +26,7 @@ const NavPages = (props) => {
         {logo}
         {props.children}
         {!props.mobile && routes.map(route => <Menu.Item key={route.link} as={Link}
+                                                         onClick={props.inSidebar ? props.onClick : () => null}
                                                          to={route.link}>{route.name}</Menu.Item>)}
     </>;
 };

@@ -19,7 +19,7 @@ const Navigation = (props) => {
             visible={sidebarVisible}
             width="thin"
         >
-            <NavPages/>
+            <NavPages inSidebar onClick={() => setSidebarVisible(false)}/>
         </Sidebar>
 
         <Sidebar.Pusher style={{marginBottom: 30}} dimmed={sidebarVisible}>
