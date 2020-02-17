@@ -82,7 +82,7 @@ function Filters(props) {
 
     return (
         <div>
-            <Form id = "filter">
+            <Form class="filter">
                 <Form.Field>
                     I am looking to spend ___ money.
                 </Form.Field>
@@ -90,8 +90,8 @@ function Filters(props) {
                     <Radio
                         label="$"
                         name="radioGroup"
-                        value="this"
-                        checked={value === "this"}
+                        value="$"
+                        checked={value === "$"}
                         onChange={handleChange}
                     />
                 </Form.Field>
@@ -99,8 +99,8 @@ function Filters(props) {
                     <Radio
                         label="$$"
                         name="radioGroup"
-                        value="that"
-                        checked={value === "that"}
+                        value="$$"
+                        checked={value === "$$"}
                         onChange={handleChange}
                     />
                 </Form.Field>
@@ -108,14 +108,14 @@ function Filters(props) {
                     <Radio
                         label="$$$"
                         name="radioGroup"
-                        value="that2"
+                        value="$$$"
                         checked={value === "that2"}
                         onChange={handleChange}
                     />
                 </Form.Field>
             </Form>
 
-            <div id="filter">
+            <div class="filter">
                 <p> I prefer to travel ___ minutes to the grocery store </p>
                 <Dropdown
                     placeholder="Select Time"
@@ -124,8 +124,7 @@ function Filters(props) {
                     options={travelOptions}
                 />
             </div>
-
-            <div id="filter">
+            <div class="filter">
                 <p> I prefer to ____ to the grocery store: </p>
                 <Dropdown
                     placeholder="Select Transportation"
