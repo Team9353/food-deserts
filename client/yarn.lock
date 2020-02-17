@@ -1428,10 +1428,10 @@
     "@testing-library/dom" "^6.11.0"
     "@types/testing-library__react" "^9.1.2"
 
-"@testing-library/user-event@^8.1.1":
-  version "8.1.1"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-8.1.1.tgz#780b5bc0db44243ba7f8bbbe30265bf10d7c7ac9"
-  integrity sha512-sJ4WGVOK0+8kphgEJwTfVLyLwhejzWQYH35BgUK0EZv3cKr6Gnofjo4GVyUaj/q1ddqK65FdPS3iZQguZZmJGg==
+"@testing-library/user-event@^8.1.2":
+  version "8.1.2"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-8.1.2.tgz#7fb17e98b521f10b72af1b746808087d46d9aff8"
+  integrity sha512-oWZ++cNrUMtDvNtFbjJJVnP89N4eRkM8JTL5zNoTctJNvqTtQ5Ic3BYOzgEHgJZxLfy4kFvoq3wZcDuZIwJq/Q==
 
 "@types/babel__core@^7.1.0":
   version "7.1.3"
