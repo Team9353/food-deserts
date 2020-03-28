@@ -30,19 +30,6 @@ function App() {
                     </Switch>
                 </div>
             </Router>
-            < CacheBuster>
-                {({loading, isLatestVersion, refreshCacheAndReload}) => {
-                    if (loading) {
-                        return null;
-                    }
-                    if (!loading && !isLatestVersion) {
-                        // You can decide how and when you want to force reload
-                        refreshCacheAndReload();
-                    }
-                    return null;
-                }
-                }
-            </CacheBuster>
         </Sidebar.Pushable>
     );
 }
