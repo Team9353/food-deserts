@@ -3,7 +3,7 @@ const router = express.Router();
 const axios = require('axios');
 const dotenv = require('dotenv').config;
 
-let key = 'AIzaSyCZdfP3LaN1LCLl06tUUxjGg0DR13X86Zk';
+let key = provess.env.GOOGLE_MAPS_API_KEY;
 let placeDetails = function() {
     this.places = [];
 }
