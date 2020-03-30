@@ -17,7 +17,7 @@ class MapContainer extends React.Component {
         let data = await response.json();
         this.setState({apiResponse: "got"});
 
-        return data
+        return data;
     }
 
     getNearby() {
@@ -27,7 +27,7 @@ class MapContainer extends React.Component {
     render() {
         return (
             <div class="outer">
-                <button onClick={()=> this.getNearby()}> Click me</button>
+                <button onClick={() => this.getNearby()}> Click me</button>
                 <h1>Map</h1>
                 <GoogleMap lat={this.lat} long={this.long}/>
                 <Filters/>

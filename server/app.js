@@ -10,7 +10,7 @@ var usersRouter = require("./routes/users");
 var mapRouter = require("./routes/map");
 var app = express();
 
-const rateLimit = require("express-rate-limit")
+const rateLimit = require("express-rate-limit");
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
