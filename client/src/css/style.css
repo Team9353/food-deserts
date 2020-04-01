@@ -1,4 +1,7 @@
+/* Styling for hero banner items, (page agnostic) */
+
 .hero .ui.header {
-    font-size: 3em;
+    font-size: 3.5em;
     text-align: left;
 }
+
