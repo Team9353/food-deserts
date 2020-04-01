@@ -21,7 +21,7 @@ class MapContainer extends React.Component {
     }
 
     getNearby() {
-        this.getNearbyStores().then(data => console.log(data))
+        this.getNearbyStores().then(data => console.log(data));
     }
 
     render() {

@@ -3,9 +3,9 @@ const router = express.Router();
 const axios = require("axios");
 require("dotenv").config;
 
-let key = process.env.GOOGLE_MAPS_API_KEY;
+const key = process.env.GOOGLE_MAPS_API_KEY;
 
-let placeDetails = function() {
+let PlaceDetails = function() {
     this.places = [];
 };
 
@@ -15,11 +15,10 @@ router.get("/query", async function(req, res, next) {
     let radius = 50000;
     let answer;
     let results;
-    let PD = new placeDetails();
+    let PD = new PlaceDetails();
 
     let host = "https://maps.googleapis.com";
-    let path = "/maps/api/place/nearbysearch/json?location=" + lat + "," + long
-        + "&radius=" + radius + "&type=grocery_or_supermarket&key="+ key;
+    let path = `/maps/api/place/nearbysearch/json?location=${lat},${long}&radius=${radius}&type=grocery_or_supermarket&key=${key}`;
     const total = host + path;
     try {
         answer = await axios({
