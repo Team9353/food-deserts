@@ -31,7 +31,7 @@ router.get("/query", async function(req, res, next) {
     }
 
     PD.places.push(["name", "location", "place_id", "vicinity"]);
-    for(let i = 0; i < results.length; i++) {
+    for (let i = 0; i < results.length; i++) {
         let temp = results[i];
         console.log(temp.name);
         console.log(temp.geometry.location);
