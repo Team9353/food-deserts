@@ -27,7 +27,8 @@ export default class AccordionHome extends Component {
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 0}>
                     <p>
-                        A food desert is...
+                        A food desert is an area where residents have very
+                        limited or no access to affordable healthy foods.
                     </p>
                 </Accordion.Content>
 
@@ -41,7 +42,10 @@ export default class AccordionHome extends Component {
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 1}>
                     <p>
-                        You have a lack of fresh, healthy foods readily available to you.
+                        If you are in a food desert, you will likely struggle
+                        to find healthy foods like fruits, vegetables, and whole
+                        grains. Food deserts often have convenience stores and
+                        gas stations instead of regular grocery stores.
                     </p>
                 </Accordion.Content>
 
@@ -55,10 +59,13 @@ export default class AccordionHome extends Component {
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 2}>
                     <p>
-                        Studies show.....
-                    </p>
-                    <p>
-                        Up to 20% of Americans live in food deserts!
+                        Studies show up to 20% of Americans live in food
+                        deserts. Nearly 2 million Georgia residents,
+                        including about 500,000 children, live in food deserts,
+                        according to an Atlanta Journal Constitution
+                        investigation found <a
+                        href="https://investigations.ajc.com/">
+                        here</a>.
                     </p>
                 </Accordion.Content>
             </Accordion>

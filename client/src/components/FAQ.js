@@ -1,7 +1,13 @@
 import React from 'react'
+import AccordianHome from './AccordianHome'
+
 
 class FAQ extends React.Component {
     render() {
-        return <h1>FAQ</h1>
+        return (
+            <div>
+                <AccordianHome/>
+            </div>
+        )
     }
 } export default FAQ
