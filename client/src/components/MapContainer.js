@@ -12,7 +12,7 @@ class MapContainer extends React.Component {
     }
 
     async getNearbyStores() {
-        let temp = "http://localhost:9000/map/query?lat=" + this.lat + "&long=" + this.long;
+        let temp = `http://localhost:9000/map/query?lat=${this.lat}"&long=${this.long}`;
         let response = await fetch(temp);
         let data = await response.json();
         this.setState({apiResponse: "got"});
