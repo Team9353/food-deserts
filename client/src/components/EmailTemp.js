@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Header } from 'semantic-ui-react'
 
 import { Dropdown } from 'semantic-ui-react'
-import { Form, Input, TextArea, Button, Select } from 'semantic-ui-react'
+import { Input} from 'semantic-ui-react'
 
 
 
@@ -88,7 +88,7 @@ class EmailTemp extends React.Component {
     }
 
     template (value) {
-        if(value == 1) {
+        if(value == '1') {
             return (
                 <Container text>
                     <Header as='h2'>Your Email To Your Social Worker:</Header>
@@ -108,7 +108,7 @@ class EmailTemp extends React.Component {
                 </p>
                 </Container>
             );
-        } else if (value == 2) {
+        } else if (value == '2') {
             return (
                 <Container text>
                     <Header as='h2'>Your Email To Your Doctor:</Header>
@@ -143,7 +143,7 @@ class EmailTemp extends React.Component {
     render() {
         return (
             <div>
-                <h1>EmailTemp</h1>
+                <h1>EmailTemp</h1>;
                 <Dropdown
                     placeholder='Select Template'
                     fluid
@@ -192,4 +192,4 @@ class EmailTemp extends React.Component {
                     {this.template(this.state.val)}
             </div>)
     }
-} export default EmailTemp
+} export default EmailTemp;
