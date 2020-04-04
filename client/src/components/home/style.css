@@ -13,3 +13,9 @@
 /*}*/
 
 @import url("https://cdn.jsdelivr.net/npm/semantic-ui/dist/semantic.min.css");
+
+#fooddesert{background-image: url(img/map.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
