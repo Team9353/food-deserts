@@ -8,6 +8,7 @@ import MapConfused from "./img/map_confused.png";
 import Veggies from "./img/veggies_thinking.png";
 import {Link} from "react-router-dom";
 
+
 function Home(props) {
     return (
         <Grid columns={"2"} verticalAlign={"middle"} stackable>
@@ -59,8 +60,11 @@ function Home(props) {
 
 
             {/*Call to action*/}
-            <Grid.Row columns={1} className="cta-row full-width-row">
+
+            <Grid.Row columns={1} className="cta-row full-width-row" id = "fooddesert">
                 <Grid.Column className="info-center info">
+                    {/*<img src="map.svg" width="100" height="300"></img>*/}
+
                     <Header size="large">Am I living in a food desert?</Header>
                     <Button className="main-cta cta" as={Link} to="/map">Find out now</Button>
                 </Grid.Column>

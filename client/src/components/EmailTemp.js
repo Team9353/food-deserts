@@ -1,9 +1,5 @@
 import React from 'react'
-import { Container, Header } from 'semantic-ui-react'
-
-import { Dropdown } from 'semantic-ui-react'
-import { Input} from 'semantic-ui-react'
-
+import { Container, Dropdown, Header, Input, Segment } from 'semantic-ui-react'
 
 
 const templateOptions = [
@@ -30,10 +26,12 @@ class EmailTemp extends React.Component {
         //calling the template options
 
         this.state = {
-            name: 'name',
-            lName: 'lName',
-            city: 'city',
-            phone: 'phone'
+            name: 'First Name',
+            lName: 'Last Name',
+            val: 'val',
+            city: 'City',
+            //illness: 'illness',
+            phone: 'Phone Number'
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeLast = this.handleChangeLast.bind(this);
@@ -119,8 +117,8 @@ class EmailTemp extends React.Component {
         } else {
             return (
                 <div>
-
-                    Please select a template
+                    Please complete the information above. A message will be generated
+                    for you.
                 </div>
             );
         }
@@ -129,49 +127,51 @@ class EmailTemp extends React.Component {
     render() {
         return (
             <div>
-                <h1>EmailTemp</h1>;
-                <Dropdown
-                    placeholder='Select Template'
-                    fluid
-                    selection
-                    onChange={this.handleChangeValue}
-                    options={templateOptions}
-                />
-                <form className="ui form">
-                    <div className="equal width fields">
-                        <div className="field">
-                            <label htmlFor="form-input-control-first-name">Enter Your First Name: </label>
-                            <div className="ui input">
-                                <Input type="text" value={this.state.name} onChange={this.handleChange} />
+                <h1>Email Message Template</h1>
+                <p> Fill out the form below to make a message.</p> <br/>
+
+                    <Dropdown
+                        placeholder='Select Template'
+                        fluid
+                        selection
+                        onChange={this.handleChangeValue}
+                        options={templateOptions}
+                    />
+                    <form className="ui form">
+                        <div className="equal width fields">
+                            <div className="field">
+                                <label htmlFor="form-input-control-first-name">Enter Your First Name: </label>
+                                <div className="ui input">
+                                    <Input type="text" value={this.state.name} onChange={this.handleChange} />
+                                </div>
+                            </div>
+
+                            <div className="field">
+                                <label htmlFor="form-input-control-first-name">Enter Your Last Name: </label>
+                                <div className="ui input">
+                                    <Input type="text" value={this.state.lName} onChange={this.handleChangeLast} /> <br/>
+                                </div>
                             </div>
                         </div>
 
-                        <div className="field">
-                            <label htmlFor="form-input-control-first-name">Enter Your Last Name: </label>
-                            <div className="ui input">
-                                <Input type="text" value={this.state.lName} onChange={this.handleChangeLast} /> <br/>
+                        <div className="equal width fields">
+                            <div className="field">
+                                <label htmlFor="form-input-control-first-name">Enter the City You Currently Live In: </label>
+                                <div className="ui input">
+                                    <Input type="text" value={this.state.city} onChange={this.handleChangeCity} />
+                                </div>
                             </div>
-                        </div>
-                    </div>
 
-                    <div className="equal width fields">
-                        <div className="field">
-                            <label htmlFor="form-input-control-first-name">Enter the City You Currently Live In: </label>
-                            <div className="ui input">
-                                <Input type="text" value={this.state.city} onChange={this.handleChangeCity} />
+                            <div className="field">
+                                <label htmlFor="form-input-control-first-name">Enter Your Phone Number: </label>
+                                <div className="ui input">
+                                    <Input type="tel" value={this.state.phone} onChange={this.handleChangePhone} />
+                                </div>
                             </div>
-                        </div>
 
-                        <div className="field">
-                            <label htmlFor="form-input-control-first-name">Enter Your Phone Number: </label>
-                            <div className="ui input">
-                                <Input type="tel" value={this.state.phone} onChange={this.handleChangePhone} />
-                            </div>
                         </div>
-
-                    </div>
-                </form>
-                {this.template(this.state.val)}
-            </div>)
+                    </form>
+                    {this.template(this.state.val)}
+             </div>)
     }
 } export default EmailTemp;
