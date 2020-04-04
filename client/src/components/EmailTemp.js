@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container, Dropdown, Header, Input, Segment } from 'semantic-ui-react'
-
+import { Button, Container, Dropdown, Grid, Header, Image, Input, Link, Segment } from 'semantic-ui-react'
+import MapCarrot from "./home/img/map_carrot.png";
 
 const templateOptions = [
     {
@@ -18,7 +18,6 @@ const templateOptions = [
         image: { avatar: true, src: '.jpg' },
     }
 ]
-
 
 class EmailTemp extends React.Component {
     constructor (props) {
@@ -126,7 +125,13 @@ class EmailTemp extends React.Component {
 
     render() {
         return (
-            <div>
+        {/*<div>*/}
+            <Grid columns={"1"} verticalAlign={"middle"} stackable>
+                {/*Hero banner*/}
+                <Grid.Row className="hero">
+
+
+            <Grid.Column>
                 <h1>Email Message Template</h1>
                 <p> Fill out the form below to make a message.</p> <br/>
 
@@ -171,7 +176,14 @@ class EmailTemp extends React.Component {
 
                         </div>
                     </form>
+            </Grid.Column>
+
+
+                </Grid.Row>
                     {this.template(this.state.val)}
              </div>)
-    }
+
+
+
+                }
 } export default EmailTemp;
