@@ -146,13 +146,9 @@ class EmailTemp extends React.Component {
 
     render() {
         return (
-        {/*<div>*/}
-            <Grid columns={"1"} verticalAlign={"middle"} stackable>
-                {/*Hero banner*/}
-                <Grid.Row className="hero">
+        <div>
 
 
-            <Grid.Column>
                 <h1>Email Message Template</h1>
                 <p> Fill out the form below to make a message.</p> <br/>
 
@@ -197,10 +193,8 @@ class EmailTemp extends React.Component {
 
                         </div>
                     </form>
-            </Grid.Column>
 
 
-                </Grid.Row>
                     {this.template(this.state.val)}
              </div>)
 
