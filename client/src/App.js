@@ -3,7 +3,7 @@ import CacheBuster from "./components/util/CacheBuster";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import MapContainer from "./components/map/MapContainer";
 import Home from "./components/home/Home";
-import EmailTemp from "./components/EmailTemp";
+import EmailTemp from "./components/Email/EmailTemp";
 import MoreInfo from "./components/MoreInfo";
 import FAQ from "./components/FAQ";
 import Navigation from "./components/nav/Navigation";
