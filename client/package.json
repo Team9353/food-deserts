@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^10.0.1",
     "classnames": "^2.2.6",
     "fs": "0.0.1-security",
+    "google-map-react": "^1.1.7",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
