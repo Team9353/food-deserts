@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const axios = require("axios");
-require("dotenv").config();
+
 
 const key = process.env.BACKEND_API;
 
@@ -9,85 +9,86 @@ let PlaceDetails = function () {
     this.places = [];
 };
 
-let FinalResults = function () {
-    this.results = [];
-}
-
-let TempResults = function () {
-    this.results = [];
-}
-
+const GMAPS_API_BASE_URL = "https://maps.googleapis.com/maps/api";
 
 router.get("/query", async function (req, res, next) {
-    let lat = req.query.lat;
-    let long = req.query.long;
+    const lat = req.query.lat;
+    const long = req.query.long;
 
     //calculated later
-    let time_limit = 35 * 60;
+    const time_limit = 30 * 60; // seconds
 
     //calculated later
-    let radius = 50000;
+    const radius = 50000; // meters
 
     //passed in from front end
-    let mode = "bicycling";
+    const mode = "driving";
 
-    let answer;
-    let results;
-    let PD = new PlaceDetails();
-    let FR = new FinalResults();
-    let TR = new TempResults();
+    let response;
+    let distanceData;
+    const PD = new PlaceDetails();
 
-    let host = "https://maps.googleapis.com";
-    let path = `/maps/api/place/nearbysearch/json?location=${lat},${long}&radius=${radius}&type=grocery_or_supermarket&key=${key}`;
-    const total = host + path;
+    const url = `${GMAPS_API_BASE_URL}/place/nearbysearch/json?location=${lat},${long}&radius=${radius}&type=grocery_or_supermarket&key=${key}`;
+
     try {
-        answer = await axios({
-            url: total,
+        response = await axios({
+            url,
             method: "get"
         });
-        results = answer.data.results;
+        distanceData = response.data.results;
     } catch (error) {
         console.error(error);
+        res.end(JSON.stringify({
+            ok: false,
+            message: "Server error occurred"
+        }));
     }
 
-    PD.places.push(["name", "location", "place_id", "vicinity"]);
-    for (let i = 0; i < results.length; i++) {
-        let temp = results[i];
-        PD.places.push([temp.name, temp.geometry.location, temp.place_id, temp.vicinity]);
-        TR.results.push([temp.name, temp.geometry.location]);
-    }
+    PD.places = distanceData.map(place => {
+        return {
+            name: place.name,
+            location: place.geometry.location,
+            id: place.place_id,
+            vicinity: place.vicinity
+        };
+    });
+    const origin = `${lat},${long}`;
+    const dests = PD.places.map(place => `place_id:${place.id}`);
+    let results = [];
 
-    for (let i = 0; i < TR.results.length; i++) {
-        let answer2;
-        let origins=`${lat},${long}`;
-        let lat2 = TR.results[i][1]["lat"];
-        let long2 = TR.results[i][1]["lng"];
-        let url2 = "https://maps.googleapis.com/maps/api/distancematrix/json?"
-            + `origins=${origins}`
-            + `&destinations=${lat2},${long2}`
-            + `&mode=${mode}`
-            + `&key=${key}`;
+    if (PD.places.length) {
+        const distanceMatrixUrl = `${GMAPS_API_BASE_URL}/distancematrix/json?origins=${origin}&destinations=${dests.join("|")}&mode=${mode}&key=${key}&units=imperial`;
 
-        let results2;
         try {
-            answer2 = await axios({
-                url: url2,
+            response = await axios({
+                url: distanceMatrixUrl,
                 method: "get"
             });
-            results2 = answer2.data
+            distanceData = response.data;
         } catch (error) {
             console.error(error);
+            res.end(JSON.stringify({
+                ok: false,
+                message: "Server error occurred"
+            }));
         }
 
-        let travel_time = results2['rows'][0]['elements'][0]['duration']['value'];
+        results = PD.places.map((place, index) => {
+            return {
+                ...place,
+                distance: distanceData.rows[0].elements[index].distance,
+                duration: distanceData.rows[0].elements[index].duration
+            }
+        });
 
-        if(travel_time <= time_limit) {
-            FR.results.push([TR.results[i][0], TR.results[i][1], travel_time]);
-        }
+        results = results.filter(place => place.duration.value < time_limit);
     }
 
     res.setHeader("Content-Type", "application/json");
-    res.end(JSON.stringify(FR.results));
+    res.end(JSON.stringify({
+        ok: true,
+        results
+    }));
 });
 
 module.exports = router;
