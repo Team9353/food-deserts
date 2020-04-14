@@ -16,7 +16,7 @@ router.get("/query", async function (req, res, next) {
     const long = req.query.long;
 
     //calculated later
-    const time_limit = 30 * 60; // seconds
+    const timeLimit = 30 * 60; // seconds
 
     //calculated later
     const radius = 50000; // meters
@@ -78,10 +78,10 @@ router.get("/query", async function (req, res, next) {
                 ...place,
                 distance: distanceData.rows[0].elements[index].distance,
                 duration: distanceData.rows[0].elements[index].duration
-            }
+            };
         });
 
-        results = results.filter(place => place.duration.value < time_limit);
+        results = results.filter(place => place.duration.value < timeLimit);
     }
 
     res.setHeader("Content-Type", "application/json");
