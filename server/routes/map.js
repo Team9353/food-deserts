@@ -16,19 +16,33 @@ router.get("/query", async function (req, res, next) {
     const long = req.query.long;
 
     //calculated later
-    const timeLimit = 30 * 60; // seconds
+    const timeLimit = req.query.tt * 60; // seconds
 
     //calculated later
     const radius = 50000; // meters
 
     //passed in from front end
-    const mode = "driving";
+    const modetemp = req.query.transit;
+    let mode = "";
+
+    if("wheelchair" === modetemp || "walking" === modetemp) {
+        mode = "walking";
+    } else if ("public_transit" === modetemp) {
+        mode = "transit"
+    } else if ("car" === modetemp) {
+        mode = "driving"
+    }
+
+    const price = req.query.budget;
+
+    console.log(timeLimit +"/n" + mode + "/n" + price)
 
     let response;
     let distanceData;
     const PD = new PlaceDetails();
 
-    const url = `${GMAPS_API_BASE_URL}/place/nearbysearch/json?location=${lat},${long}&radius=${radius}&type=grocery_or_supermarket&key=${key}`;
+    const url = `${GMAPS_API_BASE_URL}/place/nearbysearch/json?location=${lat},${long}&radius=${radius}`
+        + `&rankBy=distance&keyword=supermarket|grocery|market&key=${key}`;
 
     try {
         response = await axios({
@@ -37,7 +51,7 @@ router.get("/query", async function (req, res, next) {
         });
         distanceData = response.data.results;
     } catch (error) {
-        console.error(error);
+        //console.error(error);
         res.end(JSON.stringify({
             ok: false,
             message: "Server error occurred"
@@ -66,7 +80,7 @@ router.get("/query", async function (req, res, next) {
             });
             distanceData = response.data;
         } catch (error) {
-            console.error(error);
+            //console.error(error);
             res.end(JSON.stringify({
                 ok: false,
                 message: "Server error occurred"

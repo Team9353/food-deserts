@@ -8,6 +8,7 @@ import PreferredTransitEntry from "./transit/PreferredTransitEntry";
 import PreferredTravelTime from "./transit/PreferredTravelTime";
 import {connect} from "react-redux";
 import "./style.css";
+import MapContainer from "../../MapContainer";
 
 function WizardContainer({address}) {
     const [instance, setInstance] = useState();
@@ -22,6 +23,7 @@ function WizardContainer({address}) {
                 <BudgetEntry/>
                 <PreferredTransitEntry/>
                 <PreferredTravelTime/>
+                <MapContainer/>
             </StepWizard>
         </div>
     </div>
