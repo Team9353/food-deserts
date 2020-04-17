@@ -28,14 +28,14 @@ router.get("/query", async function (req, res, next) {
     if("wheelchair" === modetemp || "walking" === modetemp) {
         mode = "walking";
     } else if ("public_transit" === modetemp) {
-        mode = "transit"
+        mode = "transit";
     } else if ("car" === modetemp) {
-        mode = "driving"
+        mode = "driving";
     }
 
     const price = req.query.budget;
 
-    console.log(timeLimit +"/n" + mode + "/n" + price)
+    console.log(timeLimit +"/n" + mode + "/n" + price);
 
     let response;
     let distanceData;
