@@ -1,5 +1,5 @@
 import React from 'react'
-import {Segment} from 'semantic-ui-react'
+import {Segment} from "semantic-ui-react";
 
 const MoreInfo = () => (
     <div>
@@ -92,4 +92,4 @@ const MoreInfo = () => (
     </div>
 );
 
-export default MoreInfo
+export default MoreInfo;

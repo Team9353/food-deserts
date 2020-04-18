@@ -34,14 +34,14 @@ function App() {
                     </Switch>
 
                     <Segment style={{
-                        margin: '7em 0em 0em 0em', padding: '1em 0em', background: '#B2E5BC' +
-                            ''
+                        margin: "7em 0em 0em 0em", padding: "1em 0em", background: "#B2E5BC" +
+                            ""
                     }}>
                         <Container textAlign='center'>
                             <Grid divided stackable>
                                 <Grid.Column width={4}>
                                     <List link>
-                                        <List.Item style={{color: 'Blue'}} as={Link} to='/termsOfService'>Terms of
+                                        <List.Item style={{color: "Blue"}} as={Link} to="/termsOfService">Terms of
                                             Service</List.Item>
                                         Click the link above to view the terms of
                                         service.
@@ -49,14 +49,14 @@ function App() {
                                 </Grid.Column>
                                 <Grid.Column width={4}>
                                     <List link>
-                                        <List.Item style={{color: 'Blue'}} as={Link} to='/PrivacyPolicy'>Privacy
+                                        <List.Item style={{color: "Blue"}} as={Link} to="/PrivacyPolicy">Privacy
                                             Policy</List.Item>
                                         Click the link above to view the privacy policy.
                                     </List>
                                 </Grid.Column>
 
                                 <Grid.Column width={7}>
-                                    <Header as='h4' content='The Food As Medicine Initiative'/>
+                                    <Header as='h4' content="The Food As Medicine Initiative"/>
                                     <p>
                                         This web app was created by Georgia Tech
                                         Junior Design Team 9353.

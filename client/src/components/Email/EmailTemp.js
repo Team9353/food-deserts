@@ -1,20 +1,16 @@
-import React from 'react'
-import {Container, Dropdown, Form, Grid, Header} from "semantic-ui-react"
+import React from "react";
+import {Container, Dropdown, Form, Grid, Header} from "semantic-ui-react";
 
 const templateOptions = [
     {
-        key: 'SW',
-        text: 'Social Worker',
-        value: '1',
-        //Seong's image here!!
-        // image: {avatar: true, src: ".jpg"},
+        key: "SW",
+        text: "Social Worker",
+        value: "1",
     },
     {
-        key: 'Doc',
-        text: 'Doctor',
-        value: '2',
-        // //Seong's image here!!
-        // image: {avatar: true, src: ".jpg"},
+        key: "Doc",
+        text: "Doctor",
+        value: "2",
     }
 ];
 
@@ -26,11 +22,11 @@ class EmailTemp extends React.Component {
         //calling the template options
 
         this.state = {
-            name: '',
-            lName: '',
-            val: 'val',
-            city: '',
-            phone: ''
+            name: "",
+            lName: "",
+            val: "val",
+            city: "",
+            phone: ""
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeLast = this.handleChangeLast.bind(this);
@@ -75,14 +71,14 @@ class EmailTemp extends React.Component {
     handleChangeValue = (e, {value}) => {
         this.setState({
             val: value
-        })
+        });
     };
 
 
     template(value) {
 
 
-        if (value == '1') {
+        if (value === "1") {
             return (
                 <Container text>
                     <Header as='h2'>Your Email To Your Social Worker:</Header>
@@ -107,7 +103,7 @@ class EmailTemp extends React.Component {
                     </p>
                 </Container>
             );
-        } else if (value == '2') {
+        } else if (value === "2") {
             return (
                 <Container text>
                     <Header as='h2'>Your Email To Your Doctor:</Header>
@@ -180,9 +176,7 @@ class EmailTemp extends React.Component {
                         {this.template(this.state.val)}
                     </Grid.Column>
                 </Grid.Row>
-            </Grid>)
-
-
+            </Grid>);
     }
 }
 
