@@ -1,8 +1,5 @@
 import React from 'react'
-import {Container, Dropdown, Form, Grid, Header} from 'semantic-ui-react'
-
-import "./Email.css";
-
+import {Container, Dropdown, Form, Grid, Header} from "semantic-ui-react"
 
 const templateOptions = [
     {
@@ -10,14 +7,14 @@ const templateOptions = [
         text: 'Social Worker',
         value: '1',
         //Seong's image here!!
-        image: {avatar: true, src: '.jpg'},
+        // image: {avatar: true, src: ".jpg"},
     },
     {
         key: 'Doc',
         text: 'Doctor',
         value: '2',
-        //Seong's image here!!
-        image: {avatar: true, src: '.jpg'},
+        // //Seong's image here!!
+        // image: {avatar: true, src: ".jpg"},
     }
 ];
 
@@ -29,12 +26,11 @@ class EmailTemp extends React.Component {
         //calling the template options
 
         this.state = {
-            name: 'First Name',
-            lName: 'Last Name',
+            name: '',
+            lName: '',
             val: 'val',
-            city: 'City',
-            //illness: 'illness',
-            phone: 'Phone Number'
+            city: '',
+            phone: ''
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleChangeLast = this.handleChangeLast.bind(this);
@@ -91,18 +87,23 @@ class EmailTemp extends React.Component {
                 <Container text>
                     <Header as='h2'>Your Email To Your Social Worker:</Header>
                     <p>
-                        Hello. My name is {this.state.name} {this.state.lName}. I
-                        wanted to reach out to you for assistance. I currently live
-                        in a food desert - I usually stay in the {this.state.city}
-                        area. I have chronic illnesses,
-                        and take medication that requires me to have regular meals.
+                        Hello. My name is {this.state.name ? this.state.name :
+                        "_____"} {this.state.lName ? this.state.lName : "_____"
+                    }.
+                        I wanted to reach out to you for assistance. I currently
+                        live in a food desert - I usually stay in the
+                        {this.state.city ? " " + this.state.city : "_____ "} area.
                         Given the fact that I live in a food desert, I would like
                         to find methods/places where I can get food on a regular
                         basis. I would love to speak with you about any
                         opportunities you think would be helpful for me.
-                        You can contact me by phone at {this.state.phone}. <br/>
+                        You can contact me by phone at
+                        {this.state.phone ? " " + this.state.phone : " _____"}.
+                        <br/>
                         Thank you, <br/>
-                        {this.state.name} {this.state.lName}
+                        {this.state.name ? this.state.name :
+                            "_____"} {this.state.lName ? this.state.lName :
+                        "_____"}
                     </p>
                 </Container>
             );
@@ -111,20 +112,24 @@ class EmailTemp extends React.Component {
                 <Container text>
                     <Header as='h2'>Your Email To Your Doctor:</Header>
                     <p>
-                        Hello. My name is {this.state.name} {this.state.lName}. I
-                        wanted to reach out to you for assistance in connecting with
-                        a social worker. I currently live in a food desert - I
-                        usually stay in the {this.state.city} area. I have chronic
-                        illnesses and take medication that requires me to have
-                        regular meals. Given the fact that I live in a food desert,
-                        I would like to find methods/places where I can get food on
-                        a regular basis. I would love to speak with you about any
-                        opportunities you think would be helpful for me. You can
-                        contact me by phone at {this.state.phone}. <br/>
+                        Hello. My name is {this.state.name ? this.state.name :
+                        "_____ "} {this.state.lName ? " " + this.state.lName :
+                        "_____"}. I wanted to reach out to you for assistance in
+                        connecting with a social worker. I currently live in a
+                        food desert - I usually stay in the
+                        {this.state.city ? " " + this.state.city + " " : "_____ "}
+                        area. I would like to find methods/places where I can
+                        get food on a regular basis. I would love to speak with
+                        you about any opportunities you think would be helpful
+                        for me. You can contact me by phone at
+                        {this.state.phone ? " " + this.state.phone : " _____"}.
+                        <br/>
 
                         Thank you, <br/>
 
-                        {this.state.name} {this.state.lName}
+                        {this.state.name ? this.state.name :
+                            "_____"} {this.state.lName ? this.state.lName :
+                        "_____"}
                     </p>
                 </Container>
             );
