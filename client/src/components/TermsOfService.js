@@ -1,5 +1,5 @@
-import React from 'react'
-import {Segment} from 'semantic-ui-react'
+import React from "react";
+import {Segment} from "semantic-ui-react";
 
 const TermsOfService = () => (
     <div>
@@ -62,4 +62,4 @@ const TermsOfService = () => (
     </div>
 );
 
-export default TermsOfService
+export default TermsOfService;

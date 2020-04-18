@@ -1,5 +1,5 @@
-import React from 'react'
-import {Segment} from 'semantic-ui-react'
+import React from "react";
+import {Segment} from "semantic-ui-react";
 
 const PrivacyPolicy = () => (
     <div>
@@ -109,5 +109,5 @@ const PrivacyPolicy = () => (
     </div>
 );
 
-export default PrivacyPolicy
+export default PrivacyPolicy;
 
