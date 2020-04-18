@@ -8,19 +8,7 @@ class MapContainer extends React.Component {
         this.state = {apiResponse: ""};
     }
 
-    async getNearbyStores() {
-        let location = this.props.location;
-        let props = this.props;
-        let temp = `/api/v1/map/query?lat=${location.lat}&long=${location.lng}`
-            + `&budget=${props.budget[0]}`
-            + `&transit=${props.preferredTransit}`
-            + `&tt=${props.preferredTravelTime[0]}`;
-        let response = await fetch(temp);
-        let data = await response.json();
-        this.setState({apiResponse: "got"});
 
-        return data;
-    }
 
     getNearby() {
         this.getNearbyStores().then(data => console.log(data));

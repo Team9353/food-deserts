@@ -1,20 +1,17 @@
-import React, {Component} from "react";
+import React from "react";
 import {GoogleMap, withGoogleMap, withScriptjs} from "react-google-maps";
 import {compose, withProps} from "recompose";
 import {Loader} from "semantic-ui-react";
 
-class GoogleMapInternal extends Component {
-    render() {
-        return <div style={{height: "100vh", width: "100%"}}>
-            <GoogleMap
-                defaultZoom={8}
-                defaultCenter={{lat: this.props.lat, lng: this.props.long}}
-            >
-            </GoogleMap>
-        </div>;
-    }
-
-
+function GoogleMapInternal(props) {
+    return <div style={{height: "100vh", width: "100%"}}>
+        <GoogleMap
+            defaultZoom={8}
+            defaultCenter={{lat: props.lat, lng: props.lng}}
+        >
+            {props.children}
+        </GoogleMap>
+    </div>;
 }
 
 const CompleteMap = compose(
