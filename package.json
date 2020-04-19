@@ -1,6 +1,6 @@
 {
   "name": "food-deserts",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,5 @@
   "bugs": {
     "url": "https://github.com/team9353/food-deserts/issues"
   },
-  "homepage": "https://github.com/team9353/food-deserts#readme",
-  "devDependencies": {
-    "danger": "^10.1.1"
-  }
+  "homepage": "https://github.com/team9353/food-deserts#readme"
 }
