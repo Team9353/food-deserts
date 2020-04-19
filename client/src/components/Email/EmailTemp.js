@@ -19,12 +19,7 @@ class EmailTemp extends React.Component {
 
     constructor(props) {
         super(props);
-        //calling the template options
-
         this.state = {
-            name: "",
-            lName: "",
-            val: "val",
             city: "",
             phone: ""
         };
@@ -32,7 +27,6 @@ class EmailTemp extends React.Component {
         this.handleChangeLast = this.handleChangeLast.bind(this);
         this.handleChangeValue = this.handleChangeValue.bind(this);
         this.handleChangeCity = this.handleChangeCity.bind(this);
-        // this.handleChangeIllness = this.handleChangeIllness.bind(this);
         this.handleChangePhone = this.handleChangePhone.bind(this);
     }
 
@@ -54,14 +48,6 @@ class EmailTemp extends React.Component {
         });
     }
 
-
-    //Possible for later implementation
-    // handleChangeIllness(e) {
-    //     this.setState({
-    //         illness: e.target.illness
-    //     });
-    // }
-
     handleChangePhone(e) {
         this.setState({
             phone: e.target.value
@@ -74,10 +60,7 @@ class EmailTemp extends React.Component {
         });
     };
 
-
     template(value) {
-
-
         if (value === "1") {
             return (
                 <Container text>
