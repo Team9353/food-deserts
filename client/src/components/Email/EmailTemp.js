@@ -121,6 +121,7 @@ class EmailTemp extends React.Component {
 
     render() {
         return (
+
             <Grid className="Email" padded centered columns={12}>
                 <Grid.Row>
                     <Grid.Column width={8}>

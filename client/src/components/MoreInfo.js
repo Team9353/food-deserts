@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import {Grid, Header, List, Segment} from "semantic-ui-react";
 
 const MoreInfo = () => (
