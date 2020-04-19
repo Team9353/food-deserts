@@ -58,13 +58,10 @@ function Home(props) {
 
             </Grid.Row>
 
-
             {/*Call to action*/}
 
             <Grid.Row columns={1} className="cta-row full-width-row" id = "fooddesert">
                 <Grid.Column className="info-center info">
-                    {/*<img src="map.svg" width="100" height="300"></img>*/}
-
                     <Header size="large">Am I living in a food desert?</Header>
                     <Button className="main-cta cta" as={Link} to="/map">Find out now</Button>
                 </Grid.Column>

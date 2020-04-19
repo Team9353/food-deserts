@@ -5,11 +5,11 @@ const MoreInfo = () => (
     <div>
         <Segment>
             <h1>
-                Information About Food Deserts:
+                Information About Food Deserts
             </h1></Segment>
 
         <Segment color='green'>
-            <h3> What Is The Official Definition Of A Food Desert? </h3>
+            <h3> What is the official definition of a food desert? </h3>
             The USDA’s formal definition of food security stresses
             "ready availability of nutritionally adequate and safe foods”
             that can be obtained in socially acceptable ways. The concept
@@ -18,7 +18,7 @@ const MoreInfo = () => (
 
             <br></br>
 
-            <h3> Problems Related To Current Solutions For Food Deserts</h3>
+            <h3> Problems related to current solutions for food deserts</h3>
 
             - Educational materials regarding food security and food justice
             are often lackluster, lacking in readability level and
@@ -69,7 +69,7 @@ const MoreInfo = () => (
 
         <Segment>
             <h1>
-                Information About The Team:
+                Information About The Team
             </h1></Segment>
         <Segment color='green'>This web app was created by Georgia Tech
             Junior Design

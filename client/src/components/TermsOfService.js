@@ -12,7 +12,7 @@ const TermsOfService = () => (
             <h1> Introduction </h1>
 
 
-            Last updated: Friday, April 17 2020. <br></br><br></br>
+            Last updated: Friday, April 17, 2020. <br></br><br></br>
 
             Please read these Terms and Conditions carefully before using the
             Food Desert Mapping Tool website operated by

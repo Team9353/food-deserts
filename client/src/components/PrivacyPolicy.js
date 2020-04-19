@@ -11,7 +11,7 @@ const PrivacyPolicy = () => (
         <Segment color='green'>
             <h1> Introduction </h1>
 
-            Last updated: Friday, April 17 2020. <br></br><br></br>
+            Last updated: Friday, April 17, 2020. <br></br><br></br>
             This Privacy Policy describes our policies and procedures on the
             collection, use and disclosure of your information when you use
             the service and tells you about your privacy rights and how the
