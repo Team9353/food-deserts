@@ -40,7 +40,7 @@ router.get("/query", async function (req, res, next) {
     let htmlAttributions;
     const PD = new PlaceDetails();
 
-    const url = encodeURI(`${GMAPS_API_BASE_URL}/place/nearbysearch/json?location=${lat},${long}&radius=${radius}`
+    const url = encodeURI(`${GMAPS_API_BASE_URL}/place/nearbysearch/json?location=${lat},${long}`
         + `&rankBy=distance&keyword=supermarket|grocery|market&key=${key}`);
     console.log(url);
     try {
