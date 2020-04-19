@@ -18,4 +18,4 @@ class FAQ extends React.Component {
     }
 }
 
-export default FAQ
+export default FAQ;
