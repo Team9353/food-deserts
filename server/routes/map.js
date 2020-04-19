@@ -99,7 +99,7 @@ router.get("/query", async function (req, res, next) {
             };
         });
 
-        results = results.filter(place => place.duration.value < timeLimit);
+        results = results.filter(place => place.duration.value <= timeLimit);
     }
 
     res.setHeader("Content-Type", "application/json");
