@@ -40,8 +40,8 @@ router.get("/query", async function (req, res, next) {
     let htmlAttributions;
     const PD = new PlaceDetails();
 
-    const url = `${GMAPS_API_BASE_URL}/place/nearbysearch/json?location=${lat},${long}&radius=${radius}`
-        + `&rankBy=distance&keyword=supermarket|grocery|market&key=${key}`;
+    const url = encodeURI(`${GMAPS_API_BASE_URL}/place/nearbysearch/json?location=${lat},${long}&radius=${radius}`
+        + `&rankBy=distance&keyword=supermarket|grocery|market&key=${key}`);
     console.log(url);
     try {
         response = await axios({
@@ -50,7 +50,7 @@ router.get("/query", async function (req, res, next) {
         });
         distanceData = response.data.results;
         console.log("distance data");
-        console.log(distanceData);
+        console.log(response.data);
         htmlAttributions = response.data.html_attributions;
     } catch (error) {
         //console.error(error);
@@ -74,7 +74,7 @@ router.get("/query", async function (req, res, next) {
     let results = [];
 
     if (PD.places.length) {
-        const distanceMatrixUrl = `${GMAPS_API_BASE_URL}/distancematrix/json?origins=${origin}&destinations=${dests.join("|")}&mode=${mode}&key=${key}&units=imperial`;
+        const distanceMatrixUrl = encodeURI(`${GMAPS_API_BASE_URL}/distancematrix/json?origins=${origin}&destinations=${dests.join("|")}&mode=${mode}&key=${key}&units=imperial`);
 
         try {
             response = await axios({
