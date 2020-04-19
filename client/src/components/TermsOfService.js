@@ -23,7 +23,7 @@ const TermsOfService = () => (
             These terms apply to all visitors, users and others who access or
             use the service. By accessing or using the service you agree to be
             bound by these terms. If you disagree with any part of the terms
-            then you may not access the service. Please note that by using
+            then you may not access the service. This service uses the Google Maps APIs.  By using
             this service you are bound by these Terms and Conditions as well
             as Google's Terms of Service.
 
