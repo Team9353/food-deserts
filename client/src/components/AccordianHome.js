@@ -1,19 +1,19 @@
-import React, { Component } from 'react'
-import { Accordion, Icon } from 'semantic-ui-react'
+import React, {Component} from 'react'
+import {Accordion, Icon} from 'semantic-ui-react'
 
 export default class AccordionHome extends Component {
-    state = { activeIndex: 0 }
+    state = {activeIndex: 0};
 
     handleClick = (e, titleProps) => {
-        const { index } = titleProps
-        const { activeIndex } = this.state
-        const newIndex = activeIndex === index ? -1 : index
+        const {index} = titleProps;
+        const {activeIndex} = this.state;
+        const newIndex = activeIndex === index ? -1 : index;
 
         this.setState({ activeIndex: newIndex })
-    }
+    };
 
     render() {
-        const { activeIndex } = this.state
+        const {activeIndex} = this.state;
 
         return (
             <Accordion fluid styled>
@@ -66,7 +66,7 @@ export default class AccordionHome extends Component {
                         including about 500,000 children, live in food deserts,
                         according to an Atlanta Journal Constitution
                         investigation found <a
-                        href="https://investigations.ajc.com/">
+                        href="https://investigations.ajc.com/fooddeserts/">
                         here</a>.
                     </p>
                 </Accordion.Content>
