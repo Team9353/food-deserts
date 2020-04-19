@@ -9,6 +9,7 @@ function PlaceInfo({place, style, inMap}) {
             <Card.Content>
                 <Card.Header>
                     <a target="_blank"
+                       rel="noopener noreferrer"
                        href={`https://www.google.com/maps/search/?api=1&query=${place.vicinity}`
                        + `&query_place_id=${place.id}`}>{place.name}</a>&nbsp;
                     <span style={{
