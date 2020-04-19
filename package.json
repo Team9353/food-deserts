@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/team9353/food-deserts/issues"
   },
-  "homepage": "https://github.com/team9353/food-deserts#readme"
+  "homepage": "https://github.com/team9353/food-deserts#readme",
+  "devDependencies": {
+    "danger": "^10.1.1"
+  }
 }
