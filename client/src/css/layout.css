@@ -6,26 +6,33 @@
 
 
 /*Aligns rows and main navbar to the universal container.*/
-.ui.grid > .row,
+.ui.grid .row,
 .pushable .pusher > div.grid {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    padding: 0 2em;
+    padding: 0 1rem;
 }
 
 /* Hero banner row has extra margin */
-.ui.grid > .row.hero {
+.ui.grid .row.hero {
     margin: 5.5em auto;
 }
 
 /* Other rows have margins on the bottom */
-.ui.grid > .row {
-    margin: 0 auto 5.5em auto;
+.ui.grid .row {
+    margin: 2.75em auto 2.75em auto;
 }
 
-.ui.grid > .row.full-width-row,
-.ui.grid > .row.full-width-row > .column {
+.ui.grid .row.full-width-row,
+.ui.grid .row.full-width-row > .column {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+
+/* Lightly shaded sections allow for visual organization */
+.ui.grid .row-blocks {
     width: 100%;
     max-width: none;
     padding: 0;
