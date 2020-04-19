@@ -35,8 +35,6 @@ router.get("/query", async function (req, res, next) {
 
     const price = req.query.budget;
 
-    console.log(timeLimit +"/n" + mode + "/n" + price);
-
     let response;
     let distanceData;
     let htmlAttributions;
@@ -44,7 +42,7 @@ router.get("/query", async function (req, res, next) {
 
     const url = `${GMAPS_API_BASE_URL}/place/nearbysearch/json?location=${lat},${long}&radius=${radius}`
         + `&rankBy=distance&keyword=supermarket|grocery|market&key=${key}`;
-    console.log(url);
+
     try {
         response = await axios({
             url,

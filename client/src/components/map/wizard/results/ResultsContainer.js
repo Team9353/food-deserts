@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import WizardStep from "../WizardStep";
 import {connect} from "react-redux";
 import {useAsyncEffect} from "use-async-effect";
@@ -31,7 +31,7 @@ function ResultsContainer(props) {
         setHeaderColor("black");
         setHeaderIcon("");
         props.clearStore();
-        props.firstStep()
+        props.firstStep();
     }
 
     // This is an Effect
@@ -66,7 +66,6 @@ function ResultsContainer(props) {
     }), [props, setData, setHeader, setHeaderColor, setHeaderIcon]);
 
     const inFoodDesert = data && data.ok && data.results.length < 2;
-    console.log("inFoodDesert", inFoodDesert);
     return (
         <WizardStep header={<><Icon style={{display: "inline-block"}} color={headerColor} name={headerIcon}/> <span
             style={{color: headerColor === "green" ? "#21ba45" : "inherit"}}>{headerText}</span></>} hideNextBtn

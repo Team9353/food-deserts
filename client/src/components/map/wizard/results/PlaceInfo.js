@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {Card, Icon} from "semantic-ui-react";
 import "../style.css";
 import cx from "classnames";

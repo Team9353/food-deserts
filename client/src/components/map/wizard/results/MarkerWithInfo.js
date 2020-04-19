@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState} from "react";
 import {InfoWindow, Marker} from "react-google-maps";
 
 function MarkerWithInfo({content, position, icon}) {
@@ -13,7 +13,7 @@ function MarkerWithInfo({content, position, icon}) {
     }
 
     if (!icon) {
-        icon = "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+        icon = "http://maps.google.com/mapfiles/ms/icons/red-dot.png";
     }
 
     return (
