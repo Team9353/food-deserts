@@ -58,6 +58,7 @@ router.get("/query", async function (req, res, next) {
             ok: false,
             message: "Server error occurred"
         }));
+        return;
     }
 
     PD.places = distanceData.map(place => {
@@ -87,6 +88,7 @@ router.get("/query", async function (req, res, next) {
                 ok: false,
                 message: "Server error occurred"
             }));
+            return;
         }
 
         results = PD.places.map((place, index) => {
