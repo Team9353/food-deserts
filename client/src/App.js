@@ -1,6 +1,9 @@
 import React from "react";
+import "./css/layout.css";
+import "./css/module.css";
+import "./css/style.css";
 import CacheBuster from "./components/util/CacheBuster";
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import MapContainer from "./components/map/MapContainer";
 import Home from "./components/home/Home";
 import EmailTemp from "./components/Email/EmailTemp";
@@ -9,16 +12,12 @@ import FAQ from "./components/FAQ";
 import TermsOfService from "./components/TermsOfService";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Navigation from "./components/nav/Navigation";
-import {Container, Grid, Header, List, Segment, Sidebar} from "semantic-ui-react";
+import {Grid, Header, List, Sidebar} from "semantic-ui-react";
 
 function App() {
     return (
-        <Sidebar.Pushable as={"div"} style={{
-            margin: "0 auto",
-            minHeight: "100vh" // We need the page height to match the screen/window height so the mobile
-            // hamburger menu appears correctly.  This method of doing that is from https://github.com/ctrlplusb/react-sizeme/issues/111#issuecomment-295166102
-        }}>
-        <Router>
+        <Sidebar.Pushable as={"div"}>
+            <Router>
                 <div>
                     <Navigation/>
                     <Switch>
@@ -26,43 +25,32 @@ function App() {
                         <Route path="/email" component={EmailTemp}/>
                         <Route path="/info" component={MoreInfo}/>
                         <Route path="/faq" component={FAQ}/>
+                        <Route path="/terms" component={TermsOfService}/>
+                        <Route path="/privacy" component={PrivacyPolicy}/>
                         <Route exact path="/" component={Home}/>
-                        <Route path="/termsOfService" component={TermsOfService}/>
-                        <Route path="/PrivacyPolicy" component={PrivacyPolicy}/>
                     </Switch>
 
-                    <Segment style={{
-                        margin: "7em 0em 0em 0em", padding: "1em 0em", background: "#B2E5BC" +
-                            ""
+                    <Grid divided textAlign={"center"} centered stackable style={{
+                        marginTop: "25px", paddingBottom: "10px", background: "#B2E5BC"
                     }}>
-                        <Container textAlign='center'>
-                            <Grid divided stackable>
-                                <Grid.Column width={4}>
-                                    <List link>
-                                        <List.Item style={{color: "Blue"}} as={Link} to="/termsOfService">Terms of
-                                            Service</List.Item>
-                                        Click the link above to view the terms of
-                                        service.
-                                    </List>
-                                </Grid.Column>
-                                <Grid.Column width={4}>
-                                    <List link>
-                                        <List.Item style={{color: "Blue"}} as={Link} to="/PrivacyPolicy">Privacy
-                                            Policy</List.Item>
-                                        Click the link above to view the privacy policy.
-                                    </List>
-                                </Grid.Column>
-
-                                <Grid.Column width={7}>
-                                    <Header as='h4' content="The Food As Medicine Initiative"/>
-                                    <p>
-                                        This web app was created by Georgia Tech
-                                        Junior Design Team 9353.
-                                    </p>
-                                </Grid.Column>
-                            </Grid>
-                        </Container>
-                    </Segment>
+                        <Grid.Row>
+                            <Grid.Column textAlign={"center"} width={4}>
+                                <List horizontal>
+                                    <List.Item as={Link} to="/terms">Terms of
+                                        Service</List.Item>
+                                    <List.Item as={Link} to="/privacy">Privacy
+                                        Policy</List.Item>
+                                </List>
+                            </Grid.Column>
+                            <Grid.Column textAlign={"center"} width={4}>
+                                <Header size={"small"} content="The Food As Medicine Initiative"/>
+                                <p>
+                                    This web app was created by Georgia Tech
+                                    Junior Design Team 9353.
+                                </p>
+                            </Grid.Column>
+                        </Grid.Row>
+                    </Grid>
 
                 </div>
             </Router>

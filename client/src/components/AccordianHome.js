@@ -37,8 +37,8 @@ export default class AccordionHome extends Component {
                     index={1}
                     onClick={this.handleClick}
                 >
-                    <Icon name='dropdown' />
-                    How do you know you're in a food desert?
+                    <Icon name='dropdown'/>
+                    How do you know if you're in a food desert?
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 1}>
                     <p>
@@ -62,10 +62,9 @@ export default class AccordionHome extends Component {
                         Studies show up to 20% of Americans live in food
                         deserts. Nearly 2 million Georgia residents,
                         including about 500,000 children, live in food deserts,
-                        according to an Atlanta Journal Constitution
-                        investigation found <a
+                        according to an <a
                         href="https://investigations.ajc.com/fooddeserts/">
-                        here</a>.
+                        <em>Atlanta Journal-Constitution</em> investigation</a>.
                     </p>
                 </Accordion.Content>
             </Accordion>

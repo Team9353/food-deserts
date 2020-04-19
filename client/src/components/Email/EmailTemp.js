@@ -121,9 +121,9 @@ class EmailTemp extends React.Component {
 
     render() {
         return (
-            <Grid className="Email">
+            <Grid className="Email" padded centered columns={12}>
                 <Grid.Row>
-                    <Grid.Column>
+                    <Grid.Column width={8}>
                         <h1>Email Message Template</h1>
                         <p> Fill out the form below to make a message.</p> <br/>
 
