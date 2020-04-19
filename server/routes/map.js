@@ -42,13 +42,15 @@ router.get("/query", async function (req, res, next) {
 
     const url = `${GMAPS_API_BASE_URL}/place/nearbysearch/json?location=${lat},${long}&radius=${radius}`
         + `&rankBy=distance&keyword=supermarket|grocery|market&key=${key}`;
-
+    console.log(url);
     try {
         response = await axios({
             url,
             method: "get"
         });
         distanceData = response.data.results;
+        console.log("distance data");
+        console.log(distanceData);
         htmlAttributions = response.data.html_attributions;
     } catch (error) {
         //console.error(error);
