@@ -87,14 +87,13 @@ class EmailTemp extends React.Component {
                         "_____"} {this.state.lName ? this.state.lName : "_____"
                     }.
                         I wanted to reach out to you for assistance. I currently
-                        live in a food desert - I usually stay in the
-                        {this.state.city ? " " + this.state.city : "_____ "} area.
+                        live in a food desert - I usually stay in
+                        the {this.state.city ? this.state.city : "_____ "} area.
                         Given the fact that I live in a food desert, I would like
                         to find methods/places where I can get food on a regular
                         basis. I would love to speak with you about any
                         opportunities you think would be helpful for me.
-                        You can contact me by phone at
-                        {this.state.phone ? " " + this.state.phone : " _____"}.
+                        You can contact me by phone at {this.state.phone ? this.state.phone : " _____"}.
                         <br/>
                         Thank you, <br/>
                         {this.state.name ? this.state.name :
@@ -109,16 +108,14 @@ class EmailTemp extends React.Component {
                     <Header as='h2'>Your Email To Your Doctor:</Header>
                     <p>
                         Hello. My name is {this.state.name ? this.state.name :
-                        "_____ "} {this.state.lName ? " " + this.state.lName :
+                        "_____ "} {this.state.lName ? this.state.lName :
                         "_____"}. I wanted to reach out to you for assistance in
                         connecting with a social worker. I currently live in a
-                        food desert - I usually stay in the
-                        {this.state.city ? " " + this.state.city + " " : "_____ "}
-                        area. I would like to find methods/places where I can
+                        food desert - I usually stay in the {this.state.city ? this.state.city : "_____ "} area.
+                        I would like to find methods places where I can
                         get food on a regular basis. I would love to speak with
                         you about any opportunities you think would be helpful
-                        for me. You can contact me by phone at
-                        {this.state.phone ? " " + this.state.phone : " _____"}.
+                        for me. You can contact me by phone at {this.state.phone ? this.state.phone : " _____"}.
                         <br/>
 
                         Thank you, <br/>
