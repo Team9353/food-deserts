@@ -27,7 +27,7 @@ router.get("/query", async function (req, res, next) {
 
     if ("wheelchair" === modetemp || "walking" === modetemp) {
         mode = "walking";
-        if("wheelchair" === modetemp) {
+        if ("wheelchair" === modetemp) {
             timeLimit = timeLimit/2;
         }
     } else if ("public_transit" === modetemp) {
