@@ -16,7 +16,7 @@ router.get("/query", async function (req, res, next) {
     const long = req.query.long;
 
     //calculated later
-    const timeLimit = req.query.tt * 60; // seconds
+    let timeLimit = req.query.tt * 60; // seconds
 
     //calculated later
     const radius = 50000; // meters
@@ -27,13 +27,30 @@ router.get("/query", async function (req, res, next) {
 
     if("wheelchair" === modetemp || "walking" === modetemp) {
         mode = "walking";
+        if("wheelchair" === modetemp) {
+            timeLimit = timeLimit/2;
+        }
     } else if ("public_transit" === modetemp) {
         mode = "transit";
     } else if ("car" === modetemp) {
         mode = "driving";
     }
 
-    const price = req.query.budget;
+    let price = 0;
+
+    switch(req.query.budget) {
+        case '$':
+            price = 1;
+            break;
+        case '$$':
+            price = 2
+            break;
+        case '$$$':
+            price = 4;
+            break;
+        default:
+            price = 2;
+    }
 
     let response;
     let distanceData;
