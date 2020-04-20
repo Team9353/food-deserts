@@ -16,7 +16,7 @@ router.get("/query", async function (req, res, next) {
     const long = req.query.long;
 
     //calculated later
-    let timeLimit = req.query.tt * 60; // seconds
+    let timeLimit = parseInt(req.query.tt) * 60; // seconds
 
     //calculated later
     const radius = 50000; // meters
@@ -40,10 +40,10 @@ router.get("/query", async function (req, res, next) {
 
     switch(req.query.budget) {
         case "$":
-            price = 1;
+            price = 2;
             break;
         case "$$":
-            price = 2
+            price = 3;
             break;
         case "$$$":
             price = 4;
