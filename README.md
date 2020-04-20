@@ -4,10 +4,58 @@ Note: this repository contains the source code for the application.  For day-to-
 this software on a server.  We have included instructions for deploying the application on Heroku,
 which offers the ability to host applications for free at low-volume usage and low costs per month after that.
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 
 Getting Started
 ==========
+
+### The Easy Way
+Follow these instructions to get a working version of the app deployed on Heroku for free in about 10 minutes.
+
+First, click this button to open Heroku.  Enter an app name, and make a note of it.  The URL of your app will be
+<your-app-name>.herokuapp.com.  For instance, if you enter **george-burdell** as the app name, the app URL will be
+`https://george-burdell.herokuapp.com`.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+You will need 2 Google Maps API keys for this, which you can obtain using the instructions below:
+
+1. Go to [console.cloud.google.com](https://console.cloud.google.com/).  Sign in with your Google account.
+2. You will need a Google Cloud Platform project to continue.  If you don't have one already, 
+follow [these instructions](https://cloud.google.com/resource-manager/docs/creating-managing-projects)
+to set one up.
+3. Now, you should be inside your desired Google Cloud Platform project.  Make sure you see your project name
+in the top-left part of the window, just to the right of the Google Cloud Platform logo.
+4. Now, we'll create the 2 required Google Maps API keys.
+5. In the top-left corner of the screen, click the 3 horizontal lines to open the navigation menu.
+6. Hover on the **APIs & Services** item and select **Library** in the context menu that appears.
+7. Now, we will enable the APIs required by the website.  Look for the search bar that says **Search for APIs & Services**
+and type "Google Maps"
+8. Find the Maps JavaScript API and click on it.
+9. Click **Enable**.  A new screen will appear.
+10. Repeat steps 7-10 for the Places API, Geocoding API, and Distance Matrix API.
+11. Return to the navigation menu on the left, hover on the **APIs & Services** item, and select **Credentials** in the context menu that appears.
+12. Near the top of the page that appears, click **Create Credentials**, then select **API key.**
+13. An API key will be created.  Click **Restrict Key** in the dialog that appears on screen.
+14. Now, we will restrict this API key to limit the potential for abuse if a third-party got ahold of the API key.  **NOTE:** 
+Anyone in possession of the backend API can use it, so treat it like a password and regenerate it if you think someone might have
+gotten access to it.
+15. In the name field, type **Backend**. Look for the **API restrictions** header and choose **Restrict key**.  In the dropdown menu, choose Distance Matrix API and Places API.
+16. Click Save.
+17. Repeat steps 13-14, this time for the frontend API key.
+18. In the name field, type **Frontend**. Look for the **Application restrictions** header.  Choose **HTTP referrers (web sites)**.  Under the **Website restrictions** header,
+add an entry for `https://YOUR-APP-NAME-HERE.herokuapp.com/*`.  _Be sure to include the `/*` at the end of the URL._
+19. Look for the **API restrictions** header and choose **Restrict key**.  In the dropdown menu, choose Distance Matrix API and Places API.
+20. Click **Save**.
+21. Now we will add the required environment variables for the application to function.
+22. Go back to the Heroku page you were on before.  Scroll down a little bit until you see a section labeled **Config Vars**.
+23. Take the API key from Google Cloud Platform named Backend and paste it in the first Config Vars field labeled **BACKEND_API**.
+24. Now, we'll do the same thing for the frontend.  Take the API key from Google Cloud Platform named Frontend and paste it in the second Config Vars field labeled
+**REACT_APP_GOOGLE_MAPS_API_KEY**.
+25. Click **Deploy app**.  If all goes well, your very own Food Desert Mapping Web App will be deployed and ready-to-use in just a few minutes!
+26. When you see **Your app was successfully deployed**, you can click **View** to see it!
+
+
 
 These instructions indicate how to build the application from source.  If you're running the application on a server, these
 steps should be executed there.  However, you can also use this Deploy with Heroku button to quickly deploy the application on
@@ -96,6 +144,11 @@ We suggest Googling these errors; while they are fairly common, the solutions va
 
 **Problem: The backend API always returns "Server error occurred"**<br />
 **Solution:** Make sure you've set the backend API key properly, following the instructions above.
+
+**Problem: When entering an address on the website/frontend, the loading spinner appears and never goes away**<br />
+**Solution:** This is most likely a problem with your Google Maps API key (or lack thereof) or the restrictions set for it.
+The easiest way to debug this is to view the actual error by opening your web browser's JavaScript console.  In Google Chrome,
+[you can do this by pressing Ctrl-Shift-J on Windows or Cmd-Option-J on Mac](https://developers.google.com/web/tools/chrome-devtools/open#console).
 
 # Development Tips
 
