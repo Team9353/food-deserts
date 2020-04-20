@@ -30,3 +30,9 @@ a.ui.button.cta {
     height: 300px;
     background: aliceblue;
 }
+
+
+/* Address bar */
+.ui.grid .row.address-column {
+    padding: 0 !important;
+}

@@ -6,7 +6,7 @@ import {Grid, Header} from "semantic-ui-react";
 class FAQ extends React.Component {
     render() {
         return (
-            <Grid columns={"2"} verticalAlign={"middle"} stackable>
+            <Grid columns={"2"} verticalAlign={"middle"} stackable className="page-faq">
                 <Grid.Row columns={1} className="info-row">
                     <Grid.Column className="info info-center">
                         <Header className="info-page-header">

@@ -3,7 +3,7 @@ import {Grid, Header} from "semantic-ui-react";
 
 const PrivacyPolicy = () => (
 
-    <Grid columns={"2"} verticalAlign={"middle"} stackable>
+    <Grid columns={"2"} verticalAlign={"middle"} stackable className="page-privacy">
 
         <Grid.Row columns={1} className="info-row">
             <Grid.Column className="info info-center">

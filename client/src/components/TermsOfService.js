@@ -2,7 +2,7 @@ import React from "react";
 import {Grid, Header} from "semantic-ui-react";
 
 const TermsOfService = () => (
-    <Grid columns={"2"} verticalAlign={"middle"} stackable>
+    <Grid columns={"2"} verticalAlign={"middle"}  className="page-tos">
 
         <Grid.Row columns={1} className="info-row">
             <Grid.Column className="info info-center">
