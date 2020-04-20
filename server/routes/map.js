@@ -39,13 +39,13 @@ router.get("/query", async function (req, res, next) {
     let price = 0;
 
     switch(req.query.budget) {
-        case '$':
+        case "$":
             price = 1;
             break;
-        case '$$':
+        case "$$":
             price = 2
             break;
-        case '$$$':
+        case "$$$":
             price = 4;
             break;
         default:
