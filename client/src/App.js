@@ -6,7 +6,7 @@ import "./css/module.css";
 import "./css/style.css";
 import CacheBuster from "./components/util/CacheBuster";
 import MapContainer from "./components/map/MapContainer";
-import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import Home from "./components/home/Home";
 import EmailTemp from "./components/Email/EmailTemp";
 import MoreInfo from "./components/MoreInfo";

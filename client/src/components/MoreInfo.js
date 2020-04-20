@@ -1,7 +1,5 @@
 import React from "react";
-import {Button, Grid, Header, Image, Segment} from "semantic-ui-react";
-import Veggies from "./home/img/veggies_thinking.png";
-import {Link} from "react-router-dom";
+import {Grid, Header, Image} from "semantic-ui-react";
 import MapConfused from "./home/img/map_confused.png";
 
 const MoreInfo = () => (

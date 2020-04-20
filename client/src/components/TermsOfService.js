@@ -1,6 +1,5 @@
 import React from "react";
-import {Grid, Header, Image, Segment} from "semantic-ui-react";
-import MapConfused from "./home/img/map_confused.png";
+import {Grid, Header} from "semantic-ui-react";
 
 const TermsOfService = () => (
     <Grid columns={"2"} verticalAlign={"middle"} stackable>

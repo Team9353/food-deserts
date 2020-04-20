@@ -1,5 +1,5 @@
 import React from "react";
-import {Grid, Header, Segment} from "semantic-ui-react";
+import {Grid, Header} from "semantic-ui-react";
 
 const PrivacyPolicy = () => (
 
@@ -35,9 +35,9 @@ const PrivacyPolicy = () => (
                         Georgia Tech Junior Design Team 9353.
                     </p>
                     <p className="info-text">
-                        Please note that this service makes use of the Google Maps
-                        API(s). You can find the Google Privacy Policy at this link
-                        <a href="https://policies.google.com/privacy"></a>
+                        This service makes use of the Google Maps APIs. By using this service
+                        you are also agreeing to <a href="https://policies.google.com/privacy">Google's Privacy
+                        Policy</a>.
                     </p>
                 </Grid.Column>
             </Grid.Row>

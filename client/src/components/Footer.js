@@ -1,4 +1,4 @@
-import {Grid, Header, List, Menu} from "semantic-ui-react";
+import {Grid, List, Menu} from "semantic-ui-react";
 import {Link} from "react-router-dom";
 import React from "react";
 import packageJson from "../../package.json";
