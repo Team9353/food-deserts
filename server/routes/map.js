@@ -23,11 +23,12 @@ router.get("/query", async function (req, res, next) {
 
     //passed in from front end
     const modetemp = req.query.transit;
+
     let mode = "";
 
-    if ("wheelchair" === modetemp || "walking" === modetemp) {
+    if ("wheelchair_or_scooter" === modetemp || "walking" === modetemp) {
         mode = "walking";
-        if ("wheelchair" === modetemp) {
+        if ("wheelchair_or_scooter" === modetemp) {
             timeLimit = timeLimit/2;
         }
     } else if ("public_transit" === modetemp) {
