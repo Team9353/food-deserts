@@ -25,7 +25,7 @@ const MoreInfo = () => (
 
         </Grid.Row>
 
-        <div className="row-blocks biscuit">
+        <div className="row-blocks color-radish">
 
             <Grid.Row columns={1} className="info-row">
                 <Grid.Column className="info">

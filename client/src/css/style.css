@@ -1,8 +1,13 @@
 /* hero banner header text */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2:wght@600&display=swap');
 
 .hero .ui.header {
     font-size: 3.5em;
     text-align: left;
+}
+
+.info .ui.header.info-page-header {
+    font-size: 3.5em;
 }
 
 .hero .column p.hero-text {
@@ -54,6 +59,32 @@
 }
 
 /*Informational pages may have shaded areas to encourage readability*/
-.row-blocks.biscuit {
-    background: #fcf7ef;
+.row-blocks.color-radish {
+    background: #eaeaea;
+}
+
+/* Navbar styling */
+.menu-wrapper h1.site-name {
+    font-size: 1em;
+    line-height: 1;
+    margin: 0.5em 0 0 0.5em;
+    font-family: 'Baloo Bhaina 2', Ubuntu, sans-serif;
+}
+
+.menu-wrapper {
+    box-shadow: 0 10px 15px #eaeaea;
+}
+
+.menu-wrapper .ui.menu {
+    border: none;
+    box-shadow: none;
+}
+
+.menu-wrapper .ui.menu .item::before {
+    background: none;
+}
+
+.menu-wrapper .ui.menu .item {
+    font-size: 1.25em;
+    border: none;
 }
