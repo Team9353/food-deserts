@@ -18,4 +18,6 @@ class FAQ extends React.Component {
             </Grid>
         );
     }
-} export default FAQ
+}
+
+export default FAQ;

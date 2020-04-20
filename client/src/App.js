@@ -6,6 +6,8 @@ import "./css/module.css";
 import "./css/state.css";
 import "./css/style.css";
 import CacheBuster from "./components/util/CacheBuster";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import MapContainer from "./components/map/MapContainer";
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import MapContainer from "./components/MapContainer";
 import Home from "./components/home/Home";
@@ -15,6 +17,8 @@ import FAQ from "./components/FAQ";
 import TermsOfService from "./components/TermsOfService";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Navigation from "./components/nav/Navigation";
+import {Sidebar} from "semantic-ui-react";
+import {Footer} from "./components/Footer";
 import {Container, Grid, Header, List, Menu, Segment, Sidebar} from "semantic-ui-react";
 import Logo from "./components/nav/img/logo.png";
 
