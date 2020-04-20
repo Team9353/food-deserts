@@ -115,7 +115,15 @@ router.get("/query", async function (req, res, next) {
             };
         });
 
-        results = results.filter(place => place.duration.value <= timeLimit);
+        results = results.filter(place =>
+        {
+            if (place.duration === undefined)
+            {
+                return false;
+            } else if (place.duration.value <= timeLimit){
+                return true;
+            }
+        });
     }
 
     res.setHeader("Content-Type", "application/json");
