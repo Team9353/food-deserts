@@ -2,7 +2,7 @@
   "name": "Food Deserts",
   "description": "An application to teach people about food deserts and help them learn if they live in one",
   "repository": "https://github.com/Team9353/food-deserts",
-  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "logo": "/client/src/components/nav/img/logo.png",
   "keywords": [
     "node",
     "express",
