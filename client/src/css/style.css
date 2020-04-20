@@ -127,20 +127,29 @@
 }
 
 /* Additional footer styling */
-.ui.grid.footer {
+.ui.grid.footer-container {
+    padding: 6em 0;
+    font-size: 1.25em;
+    background: #f7ffdb;
+}
+
+.row.footer {
     padding: 1.5em;
     text-align: left;
-    font-size: 1.25em;
     line-height: 2;
     background: none;
 }
 
-.ui.grid.footer p {
+.row.footer p {
     line-height: 2;
 }
 
-.ui.grid.footer a {
+.row.footer a {
     margin-bottom: 1em;
+}
+
+.ui.grid.footer-container > .row.footer > .column {
+    padding: 0;
 }
 
 .footer .site-logo-item {
@@ -148,7 +157,6 @@
 }
 
 .footer h1.site-name {
-    font-size: 1em;
     line-height: 1;
     margin: 0.5em 0 0 0.5em;
     font-family: 'Baloo Bhaina 2', Ubuntu, sans-serif;
@@ -161,9 +169,13 @@
     margin: -.3em 0;
     width: 2.5em;
 }
-
-.footer a {
+.footer .ui.horizontal.list {
+    font-size: 1em;
+}
+.footer .ui.horizontal.list > a.item {
     color: #551a03 !important;
+    font-size: 1.25em;
     text-decoration: underline;
     font-weight: bold;
+    margin-right: 3em;
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import {Button, Grid, Header, Image, Segment} from "semantic-ui-react";
 import Veggies from "./home/img/veggies_thinking.png";
 import {Link} from "react-router-dom";
