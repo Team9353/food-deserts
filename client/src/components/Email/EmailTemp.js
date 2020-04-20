@@ -63,7 +63,7 @@ class EmailTemp extends React.Component {
     template(value) {
         if (value === "1") {
             return (
-                <Container text>
+                <Container text className="email-output">
                     <Header as='h2'>Your Email To Your Social Worker:</Header>
                     <p>
                         Hello. My name is {this.state.name ? this.state.name :
@@ -87,7 +87,7 @@ class EmailTemp extends React.Component {
             );
         } else if (value === "2") {
             return (
-                <Container text>
+                <Container text className="email-output">
                     <Header as='h2'>Your Email To Your Doctor:</Header>
                     <p>
                         Hello. My name is {this.state.name ? this.state.name :
@@ -111,7 +111,7 @@ class EmailTemp extends React.Component {
             );
         } else {
             return (
-                <div>
+                <div className="email-please">
                     Please complete the information above. A message will be generated
                     for you.
                 </div>
@@ -121,20 +121,22 @@ class EmailTemp extends React.Component {
 
     render() {
         return (
-            <Grid className="Email">
-                <Grid.Row>
-                    <Grid.Column>
-                        <h1>Email Message Template</h1>
+            <Grid columns={"2"} verticalAlign={"middle"} stackable>
+                <Grid.Row columns={1} className="info-row">
+                    <Grid.Column className="info info-center">
+                        <Header className="info-page-header">
+                            Email message template
+                        </Header>
                         <p> Fill out the form below to make a message.</p> <br/>
 
-                        <Dropdown
+                        <Dropdown className="select-template"
                             placeholder='Select Template'
                             fluid
                             selection
                             onChange={this.handleChangeValue}
                             options={templateOptions}
                         />
-                        <Form>
+                        <Form className="email-form">
                             <Form.Group widths="equal">
                                 <Form.Input label="Enter Your First Name:" type="text" value={this.state.name}
                                             onChange={this.handleChange}/>

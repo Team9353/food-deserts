@@ -55,8 +55,12 @@
 }
 
 /* Navbar sizing */
-.menu-wrapper > div,
-.ui.container.footer-container {
+.menu-wrapper > div {
     max-width: 1280px;
     margin: 0 auto;
+}
+
+.ui.container.footer-container {
+    max-width: 1280px !important;
+    width: auto;
 }

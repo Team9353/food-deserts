@@ -93,6 +93,38 @@
 .accordion.info-accordion {
     font-size: 1.25em;
 }
+.ui.form.email-form {
+    font-size: 1.5em;
+}
+
+.ui.form.email-form .fields {
+    margin: 0;
+}
+
+.ui.form.email-form .fields .field {
+    margin: 1.25em 0;
+}
+
+.ui.form.email-form .fields .field .input {
+    margin: 1em 0;
+}
+
+.select-template {
+    margin-bottom: 2em;
+    font-size: 1.5em;
+    color: gray;
+}
+
+.email-output {
+    margin-top: 3em;
+    font-size: 1em;
+    text-align: left;
+}
+
+.email-please {
+    font-size: 1.5em;
+    margin-top: 3em;
+}
 
 /* Additional footer styling */
 .ui.grid.footer {
