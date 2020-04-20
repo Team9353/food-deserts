@@ -13,16 +13,16 @@ const Navigation = (props) => {
             animation="overlay"
             direction="left"
             icon="labeled"
-            inverted
             onHide={() => setSidebarVisible(false)}
             vertical
             visible={sidebarVisible}
             width="thin"
+            className="sidebar-menu"
         >
             <NavPages inSidebar onClick={() => setSidebarVisible(false)}/>
         </Sidebar>
 
-        <Sidebar.Pusher style={{marginBottom: 30}} dimmed={sidebarVisible}>
+        <Sidebar.Pusher style={{marginBottom: 30}} dimmed={sidebarVisible} className="menu-wrapper">
             <Responsive maxWidth={767}>
                 <NavPagesMenu mobile>
                     <Menu.Item as={Button} link onClick={() => setSidebarVisible(!sidebarVisible)}>Menu</Menu.Item>

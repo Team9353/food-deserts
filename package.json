@@ -20,5 +20,8 @@
   "homepage": "https://github.com/team9353/food-deserts#readme",
   "devDependencies": {
     "danger": "^10.1.1"
+  },
+  "dependencies": {
+    "@testing-library/dom": "^7.2.1"
   }
 }

@@ -16,7 +16,7 @@ export default class AccordionHome extends Component {
         const {activeIndex} = this.state;
 
         return (
-            <Accordion fluid styled>
+            <Accordion fluid styled className="info-accordion">
                 <Accordion.Title
                     active={activeIndex === 0}
                     index={0}
@@ -29,6 +29,7 @@ export default class AccordionHome extends Component {
                     <p>
                         A food desert is an area where residents have very
                         limited or no access to affordable healthy foods.
+
                     </p>
                 </Accordion.Content>
 
@@ -37,8 +38,8 @@ export default class AccordionHome extends Component {
                     index={1}
                     onClick={this.handleClick}
                 >
-                    <Icon name='dropdown'/>
-                    How do you know if you're in a food desert?
+                    <Icon name='dropdown' />
+                    How do you know you're in a food desert?
                 </Accordion.Title>
                 <Accordion.Content active={activeIndex === 1}>
                     <p>
@@ -46,6 +47,7 @@ export default class AccordionHome extends Component {
                         to find healthy foods like fruits, vegetables, and whole
                         grains. Food deserts often have convenience stores and
                         gas stations instead of regular grocery stores.
+
                     </p>
                 </Accordion.Content>
 
@@ -62,9 +64,10 @@ export default class AccordionHome extends Component {
                         Studies show up to 20% of Americans live in food
                         deserts. Nearly 2 million Georgia residents,
                         including about 500,000 children, live in food deserts,
-                        according to an <a
+                        according to an Atlanta Journal Constitution
+                        investigation found <a
                         href="https://investigations.ajc.com/fooddeserts/">
-                        <em>Atlanta Journal-Constitution</em> investigation</a>.
+                        here</a>.
                     </p>
                 </Accordion.Content>
             </Accordion>

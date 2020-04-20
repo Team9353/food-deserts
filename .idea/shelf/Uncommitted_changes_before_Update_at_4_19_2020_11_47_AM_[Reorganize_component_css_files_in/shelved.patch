@@ -1,0 +1,18 @@
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"name\": \"food-deserts\",\r\n  \"version\": \"1.1.0\",\r\n  \"description\": \"\",\r\n  \"main\": \"index.js\",\r\n  \"scripts\": {\r\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\r\n    \"postinstall\": \"cd server && yarn install && cd ../client && yarn install\",\r\n    \"build\": \"cd client && yarn run build\"\r\n  },\r\n  \"repository\": {\r\n    \"type\": \"git\",\r\n    \"url\": \"git+https://github.com/team9353/food-deserts.git\"\r\n  },\r\n  \"author\": \"\",\r\n  \"license\": \"MIT\",\r\n  \"bugs\": {\r\n    \"url\": \"https://github.com/team9353/food-deserts/issues\"\r\n  },\r\n  \"homepage\": \"https://github.com/team9353/food-deserts#readme\",\r\n  \"devDependencies\": {\r\n    \"danger\": \"^10.1.0\"\r\n  },\r\n  \"dependencies\": {\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- package.json	(revision f62faeef47f4f5b5fdd7cbf3b63494adbf88107f)
++++ package.json	(date 1586134238416)
+@@ -22,5 +22,8 @@
+     "danger": "^10.1.0"
+   },
+   "dependencies": {
++    "axios": "^0.19.2",
++    "cors": "^2.8.5",
++    "dotenv": "^8.2.0"
+   }
+ }

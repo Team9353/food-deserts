@@ -1,0 +1,17 @@
+Index: client/package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"name\": \"fd-client\",\r\n  \"version\": \"1.0.2\",\r\n  \"private\": true,\r\n  \"dependencies\": {\r\n    \"@reduxjs/toolkit\": \"^1.3.4\",\r\n    \"@testing-library/jest-dom\": \"^5.5.0\",\r\n    \"@testing-library/react\": \"^10.0.2\",\r\n    \"@testing-library/user-event\": \"^10.0.2\",\r\n    \"classnames\": \"^2.2.6\",\r\n    \"prop-types\": \"^15.7.2\",\r\n    \"react\": \"^16.13.0\",\r\n    \"react-dom\": \"^16.13.0\",\r\n    \"react-google-maps\": \"^9.4.5\",\r\n    \"react-load-script\": \"^0.0.6\",\r\n    \"react-places-autocomplete\": \"^7.2.1\",\r\n    \"react-redux\": \"^7.2.0\",\r\n    \"react-router-dom\": \"^5.1.2\",\r\n    \"react-scripts\": \"3.4.1\",\r\n    \"react-step-wizard\": \"^5.3.2\",\r\n    \"recompose\": \"^0.30.0\",\r\n    \"redux\": \"^4.0.5\",\r\n    \"semantic-ui-css\": \"^2.4.1\",\r\n    \"semantic-ui-react\": \"^0.88.2\"\r\n  },\r\n  \"scripts\": {\r\n    \"start\": \"react-scripts start\",\r\n    \"build\": \"react-scripts build\",\r\n    \"test\": \"react-scripts test\",\r\n    \"eject\": \"react-scripts eject\",\r\n    \"generate-build-version\": \"node generate-build-version\",\r\n    \"prebuild\": \"npm run generate-build-version\"\r\n  },\r\n  \"eslintConfig\": {\r\n    \"extends\": \"react-app\"\r\n  },\r\n  \"browserslist\": {\r\n    \"production\": [\r\n      \">0.2%\",\r\n      \"not dead\",\r\n      \"not op_mini all\"\r\n    ],\r\n    \"development\": [\r\n      \"last 1 chrome version\",\r\n      \"last 1 firefox version\",\r\n      \"last 1 safari version\"\r\n    ]\r\n  },\r\n  \"license\": \"MIT\",\r\n  \"proxy\": \"http://localhost:3000\"\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- client/package.json	(revision b31e74fa3ef43262c5e8128099c8a205c2d3d3c2)
++++ client/package.json	(date 1587352589087)
+@@ -1,6 +1,6 @@
+ {
+   "name": "fd-client",
+-  "version": "1.0.2",
++  "version": "1.1.0",
+   "private": true,
+   "dependencies": {
+     "@reduxjs/toolkit": "^1.3.4",

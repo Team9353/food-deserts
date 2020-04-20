@@ -18,7 +18,7 @@ function AddressEntry(props) {
                     hideBackBtn hideNextBtn
         >
             <Grid stackable>
-                <Grid.Row columns={1} style={{marginBottom: 0}}>
+                <Grid.Row columns={1} style={{marginBottom: 0}} className="address-column">
                     <Grid.Column>
                         <AutocompleteV2 onSelect={props.nextStep}/>
                         <Loader active={loading(props.address, props.location)}

@@ -6,22 +6,66 @@
 
 
 /*Aligns rows and main navbar to the universal container.*/
-div.row.hero, div.row.info-row,
+.ui.grid .row,
 .pushable .pusher > div.grid {
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    padding: 0 2em;
+}
+
+/*Hides overflow scrollbar in main content container.*/
+.pushable {
+    overflow-y: hidden;
+    min-height: 100vh;
+}
+
+
+/*Aligns rows and main navbar to the universal container.*/
+.ui.grid .row,
+.pushable .pusher > div.grid {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 24px !important;
+}
+
+.ui.grid .row .column.info {
+    padding: 0 !important;
 }
 
 /* Hero banner row has extra margin */
-.home .ui.grid > .row.hero {
-    margin: 5.5em auto;
+.ui.grid .row.hero {
+    margin: 5.5em auto !important;
 }
 
 /* Other rows have margins on the bottom */
-.home .ui.grid > .row {
-    margin: 0 auto 5.5em auto;
+.ui.grid .row.info-row,
+.accordion.info-accordion {
+    margin: 2.75em auto !important;
+}
+
+/* Lightly shaded sections allow for visual organization */
+.ui.grid .row-blocks {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+
+/* Navbar */
+.menu-wrapper {
+    width: 100%;
+    margin: 0 auto;
+}
+.menu-wrapper .ui.menu .menu-links-wrapper {
+    display: flex;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+/* Navbar sizing */
+.menu-wrapper > div {
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
 #fooddesert.row.full-width-row,
@@ -30,3 +74,21 @@ div.row.hero, div.row.info-row,
     max-width: none;
     padding: 0;
 }
+
+
+.ui.grid.footer-container {
+    width: 100%;
+}
+
+.ui.grid.footer-container .footer {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+#fooddesert.row.full-width-row,
+#fooddesert.row.full-width-row > .column {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+

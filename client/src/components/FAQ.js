@@ -6,12 +6,14 @@ import {Grid, Header} from "semantic-ui-react";
 class FAQ extends React.Component {
     render() {
         return (
-            <Grid padded centered stackable columns={12}>
-                <Grid.Row>
-                    <Grid.Column width={9}>
-                        <Header size={"huge"}>Frequently Asked Questions</Header>
-                        <AccordianHome/>
+            <Grid columns={"2"} verticalAlign={"middle"} stackable className="page-faq">
+                <Grid.Row columns={1} className="info-row">
+                    <Grid.Column className="info info-center">
+                        <Header className="info-page-header">
+                            Frequently asked questions
+                        </Header>
                     </Grid.Column>
+                    <AccordianHome/>
                 </Grid.Row>
             </Grid>
         );

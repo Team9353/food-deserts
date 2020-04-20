@@ -9,9 +9,12 @@
     min-height: 300px;
 }
 
+.ui.grid > .row > .column.info > img {
+    max-height: 350px;
+}
+
 .ui.grid > .row.hero > .column.info > img {
-    width: 35vw;
-    max-width: 400px;
+    max-height: 400px;
 }
 
 /* Call to action button module -------------- */
@@ -26,4 +29,10 @@ a.ui.button.cta {
 .ui.grid > .row.cta-row {
     height: 300px;
     background: aliceblue;
+}
+
+
+/* Address bar */
+.ui.grid .row.address-column {
+    padding: 0 !important;
 }
