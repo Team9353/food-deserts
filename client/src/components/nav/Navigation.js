@@ -13,11 +13,11 @@ const Navigation = (props) => {
             animation="overlay"
             direction="left"
             icon="labeled"
-            inverted
             onHide={() => setSidebarVisible(false)}
             vertical
             visible={sidebarVisible}
             width="thin"
+            className="sidebar-menu"
         >
             <NavPages inSidebar onClick={() => setSidebarVisible(false)}/>
         </Sidebar>

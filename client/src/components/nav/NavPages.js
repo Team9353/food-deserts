@@ -31,8 +31,8 @@ const NavPages = (props) => {
 
     return <>
         {logo}
-        {props.children}
         <div className="menu-links-wrapper">
+            {props.children}
             {!props.mobile && routes.map(route => <Menu.Item key={route.link} as={Link}
                                                              className="menu-link"
                                                              onClick={props.inSidebar ? props.onClick : () => null}

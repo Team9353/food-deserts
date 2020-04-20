@@ -11,17 +11,21 @@
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 24px !important;
+}
+
+.ui.grid .row .column.info {
+    padding: 0 !important;
 }
 
 /* Hero banner row has extra margin */
 .ui.grid .row.hero {
-    margin: 5.5em auto;
+    margin: 5.5em auto !important;
 }
 
 /* Other rows have margins on the bottom */
 .ui.grid .row.info-row {
-    margin: 2.75em auto 2.75em auto;
+    margin: 2.75em auto 2.75em auto !important;
 }
 
 .ui.grid .row.full-width-row,
