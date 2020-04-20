@@ -16,7 +16,7 @@ export default class AccordionHome extends Component {
         const {activeIndex} = this.state;
 
         return (
-            <Accordion fluid styled>
+            <Accordion fluid styled className="info-accordion">
                 <Accordion.Title
                     active={activeIndex === 0}
                     index={0}

@@ -1,7 +1,7 @@
 import React from "react";
 import "semantic-ui-css/semantic.min.css";
 import PropTypes from "prop-types";
-import {Menu} from "semantic-ui-react";
+import {Button, Menu} from "semantic-ui-react";
 import {Link} from "react-router-dom";
 import Logo from "./img/logo.png";
 
@@ -20,14 +20,15 @@ export const routes = [
 
 // This component assumes it's a child of a Menu
 const NavPages = (props) => {
-    const logo = <Menu.Item className="site-logo-item">
-        {/*The <img> tag is used here instead of Semantic UI React's Image
-            component on purpose.  When the Image tag is used here, the image
-            width is not constrained properly. -Evan Strat, 04-Apr-2020
-        */}
-        <img id="logo" src={Logo} alt="Logo"/>
-        <h1 class="site-name">food as <br></br>medicine</h1>
-    </Menu.Item>;
+    const logo =
+        <Menu.Item className="site-logo-item" as={Link} to="/">
+            {/*The <img> tag is used here instead of Semantic UI React's Image
+                component on purpose.  When the Image tag is used here, the image
+                width is not constrained properly. -Evan Strat, 04-Apr-2020
+            */}
+            <img id="logo" src={Logo} alt="Logo"/>
+            <h1 class="site-name">food as <br></br>medicine</h1>
+        </Menu.Item>;
 
     return <>
         {logo}

@@ -24,8 +24,9 @@
 }
 
 /* Other rows have margins on the bottom */
-.ui.grid .row.info-row {
-    margin: 2.75em auto 2.75em auto !important;
+.ui.grid .row.info-row,
+.accordion.info-accordion {
+    margin: 2.75em auto !important;
 }
 
 .ui.grid .row.full-width-row,
@@ -54,7 +55,8 @@
 }
 
 /* Navbar sizing */
-.menu-wrapper > div {
+.menu-wrapper > div,
+.ui.container.footer-container {
     max-width: 1280px;
     margin: 0 auto;
 }

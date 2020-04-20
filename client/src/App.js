@@ -15,7 +15,8 @@ import FAQ from "./components/FAQ";
 import TermsOfService from "./components/TermsOfService";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Navigation from "./components/nav/Navigation";
-import {Container, Grid, Header, List, Segment, Sidebar} from "semantic-ui-react";
+import {Container, Grid, Header, List, Menu, Segment, Sidebar} from "semantic-ui-react";
+import Logo from "./components/nav/img/logo.png";
 
 function App() {
     return (
@@ -34,11 +35,11 @@ function App() {
                     </Switch>
 
                     <Segment style={{
-                        margin: "7em 0em 0em 0em", padding: "1em 0em", background: "#B2E5BC" +
+                        margin: "7em 0em 0em 0em", padding: "1em 0em", background: "rgb(242, 255, 212)" +
                             ""
                     }}>
-                        <Container textAlign='center'>
-                            <Grid divided stackable>
+                        <Container textAlign='center' className="footer-container">
+                            <Grid divided stackable className="footer">
                                 <Grid.Column width={4}>
                                     <List link>
                                         <List.Item style={{color: "Blue"}} as={Link} to="/termsOfService">Terms of
@@ -56,7 +57,10 @@ function App() {
                                 </Grid.Column>
 
                                 <Grid.Column width={7}>
-                                    <Header as='h4' content="The Food As Medicine Initiative"/>
+                                    <Menu.Item className="site-logo-item" as={Link} to="/">
+                                        <img id="logo" src={Logo} alt="Logo"/>
+                                        <h1 class="site-name">food as <br></br>medicine</h1>
+                                    </Menu.Item>
                                     <p>
                                         This web app was created by Georgia Tech
                                         Junior Design Team 9353.

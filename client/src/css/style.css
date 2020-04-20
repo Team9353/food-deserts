@@ -88,3 +88,50 @@
     font-size: 1.25em;
     border: none;
 }
+
+/* Accordion styling */
+.accordion.info-accordion {
+    font-size: 1.25em;
+}
+
+/* Additional footer styling */
+.ui.grid.footer {
+    padding: 1.5em;
+    text-align: left;
+    font-size: 1.25em;
+    line-height: 2;
+    background: none;
+}
+
+.ui.grid.footer p {
+    line-height: 2;
+}
+
+.ui.grid.footer a {
+    margin-bottom: 1em;
+}
+
+.footer .site-logo-item {
+    display: block;
+}
+
+.footer h1.site-name {
+    font-size: 1em;
+    line-height: 1;
+    margin: 0.5em 0 0 0.5em;
+    font-family: 'Baloo Bhaina 2', Ubuntu, sans-serif;
+    display: inline-block;
+    text-align: left;
+    color: black;
+}
+.footer .site-logo-item img {
+    display: inline-block;
+    margin: -.3em 0;
+    width: 2.5em;
+}
+
+.footer a {
+    color: #551a03 !important;
+    text-decoration: underline;
+    font-weight: bold;
+}

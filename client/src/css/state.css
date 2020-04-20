@@ -18,7 +18,7 @@
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .ui.grid .row.info-row,
     .ui.grid .row.hero,
     .pushable .pusher > div.grid {
