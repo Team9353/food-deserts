@@ -15,6 +15,7 @@ import TermsOfService from "./components/TermsOfService";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import Navigation from "./components/nav/Navigation";
 import {Footer} from "./components/Footer";
+import {Sidebar} from "semantic-ui-react";
 
 function App() {
     return (

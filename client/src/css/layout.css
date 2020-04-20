@@ -11,6 +11,8 @@
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
+}
+
 /*Hides overflow scrollbar in main content container.*/
 .pushable {
     overflow-y: hidden;
