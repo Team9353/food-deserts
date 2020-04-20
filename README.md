@@ -55,13 +55,13 @@ add an entry for `https://YOUR-APP-NAME-HERE.herokuapp.com/*`.  _Be sure to incl
 25. Click **Deploy app**.  If all goes well, your very own Food Desert Mapping Web App will be deployed and ready-to-use in just a few minutes!
 26. When you see **Your app was successfully deployed**, you can click **View** to see it!
 
-
+### The Hard Way
 
 These instructions indicate how to build the application from source.  If you're running the application on a server, these
 steps should be executed there.  However, you can also use this Deploy with Heroku button to quickly deploy the application on
 Heroku.
 
-# Install Dependencies
+#### Install Dependencies
 
 1. Make sure you have [node.js](https://nodejs.org/en/download/) and NPM (the Node Package Manager, which should be included
 with node.js) installed on your computer.  If you have the option, install the required 
@@ -71,7 +71,7 @@ dependencies for node-gyp (a way to compile node dependencies from source) to sa
 4. Run `yarn install`.  This will automatically install all required dependencies in both
 the `server` and `client` directories.
 
-# Required Environment Variables
+#### Required Environment Variables
 
 The backend server is located in the [server](/server) directory.  Follow these instructions to add the required environment
 variables.
