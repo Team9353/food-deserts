@@ -58,7 +58,7 @@ router.get("/query", async function (req, res, next) {
     const PD = new PlaceDetails();
 
     const url = encodeURI(`${GMAPS_API_BASE_URL}/place/nearbysearch/json?location=${lat},${long}`
-        + `&rankby=distance&keyword=supermarket|grocery|market&key=${key}`);
+        + `&rankby=distance&maxprice=${price}&keyword=supermarket|grocery|market&key=${key}`);
 
     try {
         response = await axios({
