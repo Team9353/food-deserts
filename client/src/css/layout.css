@@ -11,6 +11,19 @@
     width: 100%;
     max-width: 1024px;
     margin: 0 auto;
+/*Hides overflow scrollbar in main content container.*/
+.pushable {
+    overflow-y: hidden;
+    min-height: 100vh;
+}
+
+
+/*Aligns rows and main navbar to the universal container.*/
+.ui.grid .row,
+.pushable .pusher > div.grid {
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
     padding: 0 24px !important;
 }
 
@@ -52,6 +65,14 @@
     max-width: 1280px;
     margin: 0 auto;
 }
+
+#fooddesert.row.full-width-row,
+#fooddesert.row.full-width-row > .column {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+
 
 .ui.grid.footer-container {
     width: 100%;
