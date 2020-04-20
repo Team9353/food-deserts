@@ -29,13 +29,6 @@
     margin: 2.75em auto !important;
 }
 
-.ui.grid .row.full-width-row,
-.ui.grid .row.full-width-row > .column {
-    width: 100%;
-    max-width: none;
-    padding: 0;
-}
-
 /* Lightly shaded sections allow for visual organization */
 .ui.grid .row-blocks {
     width: 100%;
@@ -64,3 +57,11 @@
     max-width: 1280px !important;
     width: auto;
 }
+
+#fooddesert.row.full-width-row,
+#fooddesert.row.full-width-row > .column {
+    width: 100%;
+    max-width: none;
+    padding: 0;
+}
+
