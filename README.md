@@ -191,7 +191,7 @@ a package-lock.json for run `npm install` at any point.
 -   Completed FAQ, Email, Info, Terms of Services and Privacy Policy Pages
 -   Fully implemented Results screen of the wizard
 -   Pass filter (transit, budget, etc.) results to backend
--   Imrpoved backend API (added mode of transportation, time limit, budget constraints)
+-   Improved backend API (added mode of transportation, time limit, budget constraints)
 -   Fix CSS bugs in production deployment
 -   Fix mode of transportation bug
 -   Fix `rankby` and radius filter bug
