@@ -69,7 +69,6 @@ router.get("/query", async function (req, res, next) {
         distanceData = response.data.results;
         htmlAttributions = response.data.html_attributions;
     } catch (error) {
-        //console.error(error);
         res.end(JSON.stringify({
             ok: false,
             message: "Server error occurred"
@@ -99,7 +98,6 @@ router.get("/query", async function (req, res, next) {
             });
             distanceData = response.data;
         } catch (error) {
-            //console.error(error);
             res.end(JSON.stringify({
                 ok: false,
                 message: "Server error occurred"
@@ -117,7 +115,7 @@ router.get("/query", async function (req, res, next) {
 
         results = results.filter(place =>
         {
-            if (place.duration === undefined)
+            if (!place.duration)
             {
                 return false;
             } else if (place.duration.value <= timeLimit){
